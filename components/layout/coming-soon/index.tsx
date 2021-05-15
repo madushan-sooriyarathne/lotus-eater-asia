@@ -12,7 +12,6 @@ import {
 } from "./styles";
 
 const ComingSoon: React.FC = (): JSX.Element => {
-  console.log("rendering");
   return (
     <Container>
       <Logo
