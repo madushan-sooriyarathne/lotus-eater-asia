@@ -1,0 +1,35 @@
+{
+  "name": "lotus-eater",
+  "version": "1.0.0",
+  "description": "Official website of Louts eater asia group of hotels",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madushan-sooriyarathne/louts-eater-asia.git"
+  },
+  "author": "Madushan Sooriyarathne <hello@madushan.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madushan-sooriyarathne/louts-eater-asia/issues"
+  },
+  "homepage": "https://github.com/madushan-sooriyarathne/louts-eater-asia#readme",
+  "dependencies": {
+    "next": "10.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "15.3.0",
+    "@types/react": "17.0.5",
+    "@types/react-dom": "17.0.5",
+    "@types/styled-components": "5.1.9",
+    "babel-plugin-styled-components": "1.12.0",
+    "typescript": "4.2.4"
+  }
+}
