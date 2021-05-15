@@ -1,5 +1,5 @@
 import Container from "../components/layout/container";
-import ComingSoon from "../components/layout/ComingSoon";
+import ComingSoon from "../components/layout/coming-soon";
 
 const Home: React.FC = (): JSX.Element => {
   return (

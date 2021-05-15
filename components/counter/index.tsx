@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CounterContainer, CountGroup, Number, Label } from "./Styles";
+import { CounterContainer, CountGroup, Number, Label } from "./styles";
 
 interface Props {
   toDate: Date;

@@ -1,5 +1,5 @@
-import Counter from "../../Counter/Counter";
-import HeadingPrimary from "../../headings/HeadingPrimary";
+import Counter from "../../counter";
+import HeadingPrimary from "../../headings/heading-primary";
 import {
   Container,
   DetailsWrapper,
