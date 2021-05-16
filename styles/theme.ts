@@ -21,8 +21,8 @@ const theme: DefaultTheme = {
   },
   fonts: {
     primary:
-      "'GothamPro',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    secondary: "'QuestaGrande', Georgia, 'Times New Roman', Times, serif",
+      "'Inter',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    secondary: "'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif",
   },
 };
 
