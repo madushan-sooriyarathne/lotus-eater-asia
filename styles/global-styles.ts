@@ -6,7 +6,7 @@ import {
 
 const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+    
 
     *, *::before, *::after {
         margin: 0;
