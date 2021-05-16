@@ -27,8 +27,8 @@ const Container = styled.section`
 
   display: grid;
   grid-template-columns: minmax(5rem, 10rem) 1fr minmax(5rem, 10rem);
-  grid-template-rows: min-content 1fr min-max-content;
-  gap: 5rem;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 3rem;
   align-items: center;
   justify-items: center;
 
@@ -45,6 +45,14 @@ const Container = styled.section`
 const DetailsWrapper = styled.div`
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  width: auto;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  justify-items: center;
 `;
 
 const Logo = styled.img`
@@ -61,9 +69,9 @@ const ContactGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
-  margin-top: 10rem;
+  align-self: end;
 `;
 
 const ContactMessage = styled.p`
@@ -86,6 +94,11 @@ const ContactNumber = styled.p`
   color: ${(props) => props.theme.colors.white};
   letter-spacing: 2px;
   margin-bottom: 1rem;
+
+  background: linear-gradient(135deg, #fffeff 10%, #d7fffe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   // TODO: Remove this
   @media only screen and (max-width: 550px) {
