@@ -96,7 +96,7 @@ const ContactNumber = styled.p`
 
 const ContactEmail = styled.a`
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
   text-decoration: none;
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
@@ -117,7 +117,7 @@ const Credit = styled.div`
 
   & > p {
     font-size: 1.4rem;
-    font-weight: 200;
+    font-weight: 400;
     color: ${(props) => props.theme.colors.white};
     letter-spacing: 1px;
     text-align: center;
@@ -125,7 +125,7 @@ const Credit = styled.div`
     word-wrap: break-word;
 
     & > a {
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       color: inherit;
       cursor: pointer;

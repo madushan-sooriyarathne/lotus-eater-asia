@@ -38,7 +38,7 @@ const Number = styled.p`
 
 const Label = styled.p`
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: ${(props) => props.theme.colors.white};
