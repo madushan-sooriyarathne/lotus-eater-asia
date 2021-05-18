@@ -1,10 +1,11 @@
 import Container from "../components/layout/container";
-import ComingSoon from "../components/layout/coming-soon";
+import ImageSlider from "../components/image-slider";
+import { slides } from "../site-data";
 
 const Home: React.FC = (): JSX.Element => {
   return (
     <Container>
-      <ComingSoon />
+      <ImageSlider slides={slides} />
     </Container>
   );
 };
