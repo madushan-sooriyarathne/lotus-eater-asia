@@ -2,7 +2,10 @@ declare global {
   type TextAlignment = "left" | "right" | "center" | "justify";
 
   interface Slides {
-    img: string;
+    img: {
+      nextGen: string;
+      fallback?: string;
+    };
     content?: {
       heading: string;
       paragraph: string;
