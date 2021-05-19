@@ -1,12 +1,20 @@
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
+  Overlay,
+  Logo,
+  OverlayContent,
+  OverlayTextHeading,
   Slide,
-  SlideControls,
   SlideImage,
+  SliderAnchorBorder,
+  SliderAnchorBorderWrapper,
+  SliderAnchorIcon,
+  SliderAnchorItem,
+  SliderAnchorSet,
   sliderAnimation,
-  SliderButton,
   SliderWrapper,
+  SubText,
 } from "./styles";
 
 interface Props {
@@ -15,6 +23,11 @@ interface Props {
 
 const ImageSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
   const [[page, direction], setSelected] = useState<[number, number]>([0, 1]);
+
+  let timeout: NodeJS.Timeout;
+  useEffect(() => {
+    timeout = setTimeout(() => paginate(1), 6000);
+  });
 
   const clamp = (num: number, min: number, max: number) => {
     const rangeSize = max - min;
@@ -25,19 +38,53 @@ const ImageSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
     setSelected([page + newDirection, newDirection]);
   };
 
+  const handleClick = (slideNo: number) => {
+    setSelected([slideNo, 1]);
+  };
+
   const sliderIndex = clamp(page, 0, slides.length);
 
   return (
     <SliderWrapper>
       <AnimatePresence custom={direction} initial={false}>
-        <SlideControls>
-          <SliderButton onClick={() => paginate(-1)}>
-            <use xlinkHref="/assets/svg/sprites.svg#icon-arrow-left" />
-          </SliderButton>
-          <SliderButton onClick={() => paginate(1)}>
-            <use xlinkHref="/assets/svg/sprites.svg#icon-arrow-right" />
-          </SliderButton>
-        </SlideControls>
+        <Overlay>
+          <Logo
+            src="/assets/logos/lotus-eater-asia-logo-white.svg"
+            alt="Luxury Boutique Hotels across Sri Lanka"
+          ></Logo>
+          <OverlayContent>
+            <OverlayTextHeading>
+              Privacy, Luxury <br />& Impeccable Service
+            </OverlayTextHeading>
+            <SubText>
+              Only two suites, per property for you to indulge in the
+              graciousness of old Ceylon.
+            </SubText>
+          </OverlayContent>
+
+          <SliderAnchorSet>
+            {slides.map((slide, index) => (
+              <SliderAnchorItem
+                onClick={() => {
+                  clearTimeout(timeout);
+                  handleClick(index);
+                }}
+              >
+                <SliderAnchorBorderWrapper>
+                  <SliderAnchorBorder
+                    r="2rem"
+                    cx="50%"
+                    cy="50%"
+                    active={index === sliderIndex}
+                  />
+                </SliderAnchorBorderWrapper>
+                <SliderAnchorIcon active={index === sliderIndex}>
+                  <use xlinkHref="/assets/svg/sprites.svg#icon-diamond"></use>
+                </SliderAnchorIcon>
+              </SliderAnchorItem>
+            ))}
+          </SliderAnchorSet>
+        </Overlay>
         <Slide
           key={sliderIndex}
           custom={direction}
@@ -51,8 +98,14 @@ const ImageSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
           }}
         >
           <SlideImage>
-            <source srcSet={slides[sliderIndex].img.nextGen} />
-            <img src={slides[sliderIndex].img.fallback} />
+            <source
+              type="image/avif"
+              srcSet={slides[sliderIndex].img.nextGen}
+            />
+            <img
+              src={slides[sliderIndex].img.fallback}
+              alt={slides[sliderIndex].content?.heading}
+            />
           </SlideImage>
         </Slide>
       </AnimatePresence>
