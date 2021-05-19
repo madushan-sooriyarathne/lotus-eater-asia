@@ -21,7 +21,7 @@ interface Props {
   slides: Slides[];
 }
 
-const ImageSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
+const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
   const [[page, direction], setSelected] = useState<[number, number]>([0, 1]);
 
   let timeout: NodeJS.Timeout;
@@ -113,4 +113,4 @@ const ImageSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
   );
 };
 
-export default ImageSlider;
+export default HeroSlider;
