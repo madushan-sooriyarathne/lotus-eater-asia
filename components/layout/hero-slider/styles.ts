@@ -11,12 +11,15 @@ const animate = keyframes`
 `;
 
 const SliderWrapper = styled.div`
+  grid-column: full-start / full-end;
+
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 
   position: relative;
   background-color: black;
+  z-index: -10;
 `;
 
 const Slide = styled(motion.div)`
