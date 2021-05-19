@@ -5,11 +5,16 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       white: string;
+      whiteTransparent: string;
       black: string;
     };
     fonts: {
       primary: string;
       secondary: string;
+    };
+    gradients: {
+      heroOverlay: string;
+      headingClip: string;
     };
   }
 }
@@ -17,12 +22,22 @@ declare module "styled-components" {
 const theme: DefaultTheme = {
   colors: {
     white: "#fff",
+    whiteTransparent: "rgba(225, 225, 225, 0.5)",
     black: "#000",
   },
   fonts: {
     primary:
       "'Inter',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     secondary: "'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif",
+  },
+  gradients: {
+    heroOverlay: `linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  )`,
+    headingClip: `linear-gradient(135deg, #fddb92 10%, #d1fdff 100%)`,
   },
 };
 
