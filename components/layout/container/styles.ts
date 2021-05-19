@@ -12,6 +12,7 @@ const Content = styled.main`
     )
     [content-end] minmax(5rem, 1fr) [full-end];
   grid-auto-rows: min-content;
+  gap: 10rem;
 `;
 
 export { Content };
