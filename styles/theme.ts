@@ -7,6 +7,11 @@ declare module "styled-components" {
       white: string;
       whiteTransparent: string;
       black: string;
+      blackLight: string;
+      primary: string;
+      primaryLight: string;
+      secondary: string;
+      secondaryLight: string;
     };
     fonts: {
       primary: string;
@@ -16,6 +21,10 @@ declare module "styled-components" {
       heroOverlay: string;
       headingClip: string;
     };
+    shadows: {
+      close: string;
+      spread: string;
+    };
   }
 }
 
@@ -23,7 +32,12 @@ const theme: DefaultTheme = {
   colors: {
     white: "#fff",
     whiteTransparent: "rgba(225, 225, 225, 0.5)",
-    black: "#000",
+    black: "#231a15",
+    blackLight: "#655f5b",
+    primary: "#ae8367",
+    primaryLight: "#efe6e1",
+    secondary: "#ffbe1c",
+    secondaryLight: "#fff8e6",
   },
   fonts: {
     primary:
@@ -38,6 +52,10 @@ const theme: DefaultTheme = {
     rgba(0, 0, 0, 0.7) 100%
   )`,
     headingClip: `linear-gradient(135deg, #fddb92 10%, #d1fdff 100%)`,
+  },
+  shadows: {
+    close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
+    spread: " 0 0 20px 0 rgba(0, 0, 0, 0.25)",
   },
 };
 
