@@ -56,13 +56,7 @@ const Overlay = styled.div`
   height: 100%;
   padding: 5rem 15rem;
 
-  /* background: linear-gradient(180deg, transparent 10%, rgba(0, 0, 0, 0.8)); */
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
+  background-image: ${(props) => props.theme.gradients.heroOverlay};
   z-index: 9;
 
   display: grid;
@@ -107,7 +101,7 @@ const OverlayTextHeading = styled(motion.h1)`
   text-align: center;
   text-transform: uppercase;
 
-  background: linear-gradient(135deg, #fddb92 10%, #d1fdff 100%);
+  background: ${(props) => props.theme.gradients.headingClip};
 
   -webkit-background-clip: text;
   background-clip: text;
