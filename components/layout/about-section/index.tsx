@@ -1,5 +1,5 @@
 import HeadingPrimary from "../../headings/heading-primary";
-import HeadingSecondary from "../../headings/heading-secondary";
+import HeadingTertiary from "../../headings/heading-tertiary";
 import Paragraph from "../../paragraph";
 import { Section, Image, ContentWrapper, ParagraphWrapper } from "./styles";
 
@@ -8,7 +8,7 @@ const AboutSection: React.FC = (): JSX.Element => {
     <Section>
       <ContentWrapper>
         <HeadingPrimary>Lotus Eater</HeadingPrimary>
-        <HeadingSecondary>Concept</HeadingSecondary>
+        <HeadingTertiary>Concept</HeadingTertiary>
         <ParagraphWrapper>
           <Paragraph alignment="left">
             <b>Lotus Eater</b> represents the idea of hosting, having people
