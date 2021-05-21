@@ -18,7 +18,7 @@ import {
 } from "./styles";
 
 interface Props {
-  slides: Slides[];
+  slides: Image[];
 }
 
 const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
@@ -98,13 +98,10 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
           }}
         >
           <SlideImage>
-            <source
-              type="image/avif"
-              srcSet={slides[sliderIndex].img.nextGen}
-            />
+            <source type="image/avif" srcSet={slides[sliderIndex].nextGen} />
             <img
-              src={slides[sliderIndex].img.fallback}
-              alt={slides[sliderIndex].content?.heading}
+              src={slides[sliderIndex].fallback}
+              alt={slides[sliderIndex].alt}
             />
           </SlideImage>
         </Slide>

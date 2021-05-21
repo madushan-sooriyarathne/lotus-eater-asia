@@ -19,7 +19,6 @@ const SliderWrapper = styled.div`
 
   position: relative;
   background-color: black;
-  z-index: -10;
 `;
 
 const Slide = styled(motion.div)`
