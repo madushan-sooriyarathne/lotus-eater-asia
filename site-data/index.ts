@@ -1,29 +1,19 @@
-const slides: Slides[] = [
+const slides: Image[] = [
   {
-    img: {
-      nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.jpg",
-    },
-  },
-
-  {
-    img: {
-      nextGen: "/assets/img/singhagiri-fireplace.avif",
-      fallback: "/assets/img/singhagiri-fireplace.jpg",
-    },
-  },
-
-  {
-    img: {
-      nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.jpg",
-    },
+    nextGen: "/assets/img/bg-boutique-87.avif",
+    fallback: "/assets/img/bg-boutique-87.jpg",
   },
   {
-    img: {
-      nextGen: "/assets/img/singhagiri-room.avif",
-      fallback: "/assets/img/singhagiri-room.jpg",
-    },
+    nextGen: "/assets/img/singhagiri-fireplace.avif",
+    fallback: "/assets/img/singhagiri-fireplace.jpg",
+  },
+  {
+    nextGen: "/assets/img/singhagiri-brunch.avif",
+    fallback: "/assets/img/singhagiri-brunch.jpg",
+  },
+  {
+    nextGen: "/assets/img/singhagiri-room.avif",
+    fallback: "/assets/img/singhagiri-room.jpg",
   },
 ];
 
