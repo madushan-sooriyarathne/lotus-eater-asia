@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -53,13 +53,11 @@ const PictureContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: red;
   position: relative;
 `;
 
 const PrimaryImage = styled(PictureContainer)`
   grid-area: im1;
-  background-color: blue;
 `;
 
 const SecondaryImage = styled(PictureContainer)`
@@ -82,7 +80,7 @@ const AnimatedPicture = styled(motion.img)`
   }
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled(motion.div)`
   grid-area: co;
   padding: 3rem 5rem;
 
@@ -102,6 +100,36 @@ const TitleWrapper = styled.div`
   align-items: flex-start;
 `;
 
+const sliderVariants: Variants = {
+  enter: {
+    // zIndex: 0,
+    opacity: 0,
+  },
+  center: {
+    // zIndex: 1,
+    opacity: 1,
+  },
+  exit: {
+    // zIndex: 0,
+    opacity: 0,
+  },
+};
+
+const SliderContentVariants: Variants = {
+  start: {
+    y: 10,
+    opacity: 0,
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+  },
+  leave: {
+    y: -5,
+    opacity: 0,
+  },
+};
+
 export {
   Container,
   SliderControlButton,
@@ -112,4 +140,6 @@ export {
   AnimatedPicture,
   ContentWrapper,
   TitleWrapper,
+  sliderVariants,
+  SliderContentVariants,
 };
