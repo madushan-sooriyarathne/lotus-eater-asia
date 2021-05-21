@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import ButtonPrimary from "../buttons/button-primary";
 import HeadingSecondary from "../headings/heading-secondary";
 import HeadingTertiary from "../headings/heading-tertiary";
@@ -12,57 +14,95 @@ import {
   AnimatedPicture,
   ContentWrapper,
   TitleWrapper,
+  sliderVariants,
+  SliderContentVariants,
 } from "./styles";
+import { clamp } from "../../utils";
 
-const ContentSlider: React.FC = (): JSX.Element => {
+interface Props {
+  items: SliderContent[];
+}
+
+const ContentSlider: React.FC<Props> = ({ items }: Props): JSX.Element => {
+  const [page, setPage] = useState<number>(0);
+
+  const paginate = (direction: -1 | 1): void => {
+    setPage(clamp(page + direction, 0, items.length - 1));
+  };
+
   return (
     <Container>
       <SliderControls>
-        <SliderControlButton>
+        <SliderControlButton onClick={() => paginate(1)}>
           <SliderControlButtonIcon>
             <use xlinkHref="/assets/svg/sprites.svg#icon-arrow-left" />
           </SliderControlButtonIcon>
         </SliderControlButton>
-        <SliderControlButton>
+        <SliderControlButton onClick={() => paginate(-1)}>
           <SliderControlButtonIcon>
             <use xlinkHref="/assets/svg/sprites.svg#icon-arrow-right" />
           </SliderControlButtonIcon>
         </SliderControlButton>
       </SliderControls>
-      <PrimaryImage>
-        <picture>
-          <source type="image/avif" srcSet="/assets/img/bg-boutique-87.avif" />
-          <AnimatedPicture
-            src="/assets/img/bg-boutique-87.jpg"
-            alt="About us section image"
-          />
-        </picture>
-      </PrimaryImage>
-      <SecondaryImage>
-        <picture>
-          <source
-            type="image/avif"
-            srcSet="/assets/img/singhagiri-brunch.avif"
-          />
-          <AnimatedPicture
-            src="/assets/img/singhagiri-brunch.jpg"
-            alt="About us section image"
-          />
-        </picture>
-      </SecondaryImage>
-      <ContentWrapper>
-        <TitleWrapper>
-          <HeadingSecondary>Casa Heliconia</HeadingSecondary>
-          <HeadingTertiary>Pasyala</HeadingTertiary>
-        </TitleWrapper>
-        <Paragraph>
-          Casa Heliconia comprises four beautiful and eclectic pavilions set in
-          manicured jungle within easy reach of Bandaranaike Airport. An ideal
-          retreat for anyone seeking peace, tranquillity, and some idiosyncratic
-          features in very private surroundings.
-        </Paragraph>
-        <ButtonPrimary></ButtonPrimary>
-      </ContentWrapper>
+      <AnimatePresence initial={true}>
+        <PrimaryImage>
+          <picture>
+            <source
+              type="image/avif"
+              srcSet={items[page].primaryImage.nextGen}
+            />
+            <AnimatedPicture
+              variants={sliderVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              key={page}
+              transition={{ duration: 0.5 }}
+              src={items[page].primaryImage.fallback}
+              alt={items[page].primaryImage.alt}
+            />
+          </picture>
+        </PrimaryImage>
+        {/* </AnimatePresence>
+      <AnimatePresence initial={true}> */}
+        <SecondaryImage>
+          <picture>
+            <source
+              type="image/avif"
+              srcSet={items[page].secondaryImage.nextGen}
+            />
+            <AnimatedPicture
+              variants={sliderVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              key={page}
+              transition={{ duration: 0.5 }}
+              src={items[page].secondaryImage.fallback}
+              alt={items[page].secondaryImage.alt}
+            />
+          </picture>
+        </SecondaryImage>
+
+        <ContentWrapper
+          variants={SliderContentVariants}
+          key={page}
+          initial="start"
+          animate="enter"
+          exit="leave"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 },
+          }}
+        >
+          <TitleWrapper>
+            <HeadingSecondary>{items[page].content.title}</HeadingSecondary>
+            <HeadingTertiary>{items[page].content.subtitle}</HeadingTertiary>
+          </TitleWrapper>
+          <Paragraph>{items[page].content.description}</Paragraph>
+          <ButtonPrimary></ButtonPrimary>
+        </ContentWrapper>
+      </AnimatePresence>
     </Container>
   );
 };
