@@ -43,7 +43,7 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
 
   return (
     <SliderWrapper>
-      <AnimatePresence custom={direction} initial={false}>
+      <AnimatePresence custom={direction} initial={true}>
         <Overlay>
           <Logo
             src="/assets/logos/lotus-eater-asia-logo-white.svg"
