@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Head from "next/head";
 
 import { Content } from "./styles";
+import Footer from "../footer";
 
 interface Props {
   children: ReactNode;
@@ -20,6 +21,7 @@ const Container: React.FC<Props> = ({
       {/* Header Here */}
       {children}
       {/* Footer Here */}
+      <Footer />
     </Content>
   );
 };
