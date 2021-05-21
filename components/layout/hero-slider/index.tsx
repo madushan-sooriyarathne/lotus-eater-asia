@@ -1,5 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { clamp } from "../../../utils";
+
 import {
   Overlay,
   Logo,
@@ -28,11 +30,6 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
   useEffect(() => {
     timeout = setTimeout(() => paginate(1), 6000);
   });
-
-  const clamp = (num: number, min: number, max: number) => {
-    const rangeSize = max - min;
-    return ((((num - min) % rangeSize) + rangeSize) % rangeSize) + min;
-  };
 
   const paginate = (newDirection: number = 1) => {
     setSelected([page + newDirection, newDirection]);
