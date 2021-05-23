@@ -83,4 +83,75 @@ const hotelsSlider: SliderContent[] = [
   },
 ];
 
-export { slides, hotelsSlider };
+const hotels: Hotel[] = [
+  {
+    name: "Casa Heliconia",
+    id: "casa-heliconia",
+    rooms: [],
+    experiences: [],
+    description: "",
+    images: [
+      {
+        nextGen: "/assets/img/bg-boutique-87.avif",
+        fallback: "/assets/img/bg-boutique-87.jpg",
+        alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+      },
+    ],
+    location: {
+      address: "Kaleliya, Pasyala, Sri Lanka.",
+      place: "Pasyala",
+      coords: {
+        lat: 22,
+        lng: 22,
+      },
+    },
+  },
+
+  {
+    name: "Boutique 87",
+    id: "boutique-87",
+    rooms: [],
+    experiences: [],
+    description: "",
+    images: [
+      {
+        nextGen: "/assets/img/bg-boutique-87.avif",
+        fallback: "/assets/img/bg-boutique-87.jpg",
+        alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+      },
+    ],
+    location: {
+      address: "No. 87, Galle Road, Bentota, Sri Lanka",
+      place: "Bentota",
+      coords: {
+        lat: 22,
+        lng: 22,
+      },
+    },
+  },
+
+  {
+    name: "SinghaGiri",
+    id: "singhagiri",
+    rooms: [],
+    experiences: [],
+    description: "",
+    images: [
+      {
+        nextGen: "/assets/img/singhagiri-brunch.avif",
+        fallback: "/assets/img/singhagiri-brunch.jpg",
+        alt: "Casa Heliconia Dining - Sri Lankan Luxury Boutique Hotel",
+      },
+    ],
+    location: {
+      address: "Nuwara Eliya, Sri Lanka.",
+      place: "Nuwara Eliya",
+      coords: {
+        lat: 22,
+        lng: 22,
+      },
+    },
+  },
+];
+
+export { slides, hotelsSlider, hotels };
