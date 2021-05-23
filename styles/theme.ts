@@ -9,8 +9,10 @@ declare module "styled-components" {
       black: string;
       blackLight: string;
       primary: string;
+      primaryMedium: string;
       primaryLight: string;
       secondary: string;
+      secondaryMedium: string;
       secondaryLight: string;
     };
     fonts: {
@@ -35,8 +37,10 @@ const theme: DefaultTheme = {
     black: "#231a15",
     blackLight: "#655f5b",
     primary: "#ae8367",
+    primaryMedium: "#ceb5a4",
     primaryLight: "#efe6e1",
     secondary: "#ffbe1c",
+    secondaryMedium: "#ffdf8e",
     secondaryLight: "#fff8e6",
   },
   fonts: {
