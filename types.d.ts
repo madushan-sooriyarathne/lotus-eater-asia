@@ -30,12 +30,13 @@ declare global {
     description: string;
     rooms: Room[];
     experiences: Experience[];
+    images: Image[];
     location: {
       place: string;
       address: string;
       coords: {
-        lng: string;
-        lat: string;
+        lng: number;
+        lat: number;
       };
     };
   }
