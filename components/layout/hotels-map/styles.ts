@@ -53,24 +53,29 @@ const Map = styled.svg`
   height: 70vh;
   width: auto;
   justify-self: center;
+`;
 
-  & #casa-marker,
-  & #boutique-marker,
-  & #singhagiri-marker {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+interface MarkerProps {
+  active: boolean;
+}
+
+const Marker = styled.g<MarkerProps>`
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  & path {
+    fill: ${(props) =>
+      props.active
+        ? props.theme.colors.secondaryMedium
+        : props.theme.colors.secondaryLight};
+    transition: fill 0.4s ease-in-out;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
 
     & path {
-      fill: ${(props) => props.theme.colors.secondaryLight};
-      transition: fill 0.4s ease-in-out;
-    }
-
-    &:hover {
-      transform: translateY(-5px);
-
-      & path {
-        fill: ${(props) => props.theme.colors.blackLight};
-      }
+      fill: ${(props) => props.theme.colors.blackLight};
     }
   }
 `;
@@ -201,4 +206,5 @@ export {
   CardSubHeading,
   CardButton,
   cardVariants,
+  Marker,
 };

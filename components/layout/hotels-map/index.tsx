@@ -8,6 +8,7 @@ import {
   ContentText,
   Map,
   MapWrapper,
+  Marker,
   MapCard,
   Image,
   CardContent,
@@ -385,42 +386,45 @@ const HotelsMap: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
               />
             </g>
           </g>
-          <g
+          <Marker
             id="casa-marker"
             onClick={handleMarkerSelect}
             data-id="casa-heliconia"
             className="marker"
+            active={selected?.id === "casa-heliconia"}
           >
             <path
               id="casa-marker_2"
               d="M91 481C80.5066 481 72 489.438 72 499.848C72 503.329 72.6869 506.924 74.658 509.516L91 531L107.342 509.516C109.132 507.162 110 503.001 110 499.848C110 489.438 101.493 481 91 481ZM91 491.916C95.4153 491.916 98.9956 495.468 98.9956 499.848C98.9956 504.228 95.4153 507.779 91 507.779C86.5848 507.779 83.0044 504.228 83.0044 499.848C83.0044 495.468 86.5848 491.916 91 491.916Z"
               fill="white"
             />
-          </g>
-          <g
+          </Marker>
+          <Marker
             id="boutique-marker"
             onClick={handleMarkerSelect}
             data-id="boutique-87"
             className="marker"
+            active={selected?.id === "boutique-87"}
           >
             <path
               id="boutique-marker_2"
               d="M72 643C61.5066 643 53 651.438 53 661.848C53 665.329 53.6869 668.924 55.658 671.516L72 693L88.342 671.516C90.1324 669.162 91 665.001 91 661.848C91 651.438 82.4934 643 72 643ZM72 653.916C76.4153 653.916 79.9956 657.468 79.9956 661.848C79.9956 666.228 76.4153 669.779 72 669.779C67.5848 669.779 64.0044 666.228 64.0044 661.848C64.0044 657.468 67.5848 653.916 72 653.916Z"
               fill="white"
             />
-          </g>
-          <g
+          </Marker>
+          <Marker
             id="singhagiri-marker"
             onClick={handleMarkerSelect}
             data-id="singhagiri"
             className="marker"
+            active={selected?.id === "singhagiri"}
           >
             <path
               id="singhagiri-marker_2"
               d="M225 532C214.507 532 206 540.438 206 550.848C206 554.329 206.687 557.924 208.658 560.516L225 582L241.342 560.516C243.132 558.162 244 554.001 244 550.848C244 540.438 235.493 532 225 532ZM225 542.916C229.415 542.916 232.996 546.468 232.996 550.848C232.996 555.228 229.415 558.779 225 558.779C220.585 558.779 217.004 555.228 217.004 550.848C217.004 546.468 220.585 542.916 225 542.916Z"
               fill="white"
             />
-          </g>
+          </Marker>
         </Map>
       </MapWrapper>
     </Section>
