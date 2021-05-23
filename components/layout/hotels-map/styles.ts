@@ -1,0 +1,204 @@
+import styled from "styled-components";
+import { motion, Variants } from "framer-motion";
+
+const Section = styled.section`
+  grid-column: content-start / content-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: minmax(min-content, 1fr);
+  grid-template-areas: "tx ma";
+  gap: 5rem;
+  align-items: center;
+  justify-items: start;
+`;
+
+const ContentWrapper = styled.div`
+  grid-area: tx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+`;
+
+const ContentText = styled.p`
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 145%;
+  text-align: left;
+  color: ${(props) => props.theme.colors.blackLight};
+
+  & > span {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`;
+
+const MapWrapper = styled.div`
+  grid-area: ma;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+`;
+
+const Map = styled.svg`
+  height: 70vh;
+  width: auto;
+  justify-self: center;
+
+  & #casa-marker,
+  & #boutique-marker,
+  & #singhagiri-marker {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    & path {
+      fill: ${(props) => props.theme.colors.secondaryLight};
+      transition: fill 0.4s ease-in-out;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+
+      & path {
+        fill: ${(props) => props.theme.colors.blackLight};
+      }
+    }
+  }
+`;
+
+const MapCard = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: auto;
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: ${(props) => props.theme.shadows.close};
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 10;
+`;
+
+const CloseButton = styled.svg`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+
+  width: 3rem;
+  height: 3rem;
+  fill: ${(props) => props.theme.colors.white};
+  transition: transform 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+`;
+
+const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding: 3rem;
+`;
+
+const CardHeading = styled.h3`
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: ${(props) => props.theme.colors.primary};
+`;
+
+const CardSubHeading = styled.h4`
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.blackLight};
+  margin-bottom: 2rem;
+`;
+
+const CardButton = styled.a`
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: ${(props) => props.theme.colors.blackLight};
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40%;
+    background-color: ${(props) => props.theme.colors.primaryMedium};
+    transform-origin: center bottom;
+    transition: transform 0.2s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleY(2);
+    }
+  }
+`;
+
+const cardVariants: Variants = {
+  start: {
+    y: -20,
+    opacity: 0,
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+  },
+  leave: {
+    y: 10,
+    opacity: 0,
+  },
+};
+
+export {
+  Section,
+  ContentWrapper,
+  ContentText,
+  MapWrapper,
+  Map,
+  MapCard,
+  CloseButton,
+  Image,
+  CardContent,
+  CardHeading,
+  CardSubHeading,
+  CardButton,
+  cardVariants,
+};
