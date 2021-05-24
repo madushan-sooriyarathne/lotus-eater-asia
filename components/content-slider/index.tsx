@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import ButtonPrimary from "../buttons/button-primary";
 import HeadingSecondary from "../headings/heading-secondary";
-import HeadingTertiary from "../headings/heading-tertiary";
+import HeadingSub from "../headings/heading-sub";
 import Paragraph from "../paragraph";
 import {
   Container,
@@ -97,7 +97,7 @@ const ContentSlider: React.FC<Props> = ({ items }: Props): JSX.Element => {
         >
           <TitleWrapper>
             <HeadingSecondary>{items[page].content.title}</HeadingSecondary>
-            <HeadingTertiary>{items[page].content.subtitle}</HeadingTertiary>
+            <HeadingSub>{items[page].content.subtitle}</HeadingSub>
           </TitleWrapper>
           <Paragraph>{items[page].content.description}</Paragraph>
           <ButtonPrimary route={items[page].content.route}>
