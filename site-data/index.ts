@@ -166,6 +166,9 @@ const offers: Offer[] = [
     },
     includes: [],
     terms: [],
+    price: 180,
+    discount: 10,
+    currency: "USD",
     validTill: "31-12-2021",
   },
   {
@@ -179,6 +182,7 @@ const offers: Offer[] = [
     },
     includes: [],
     terms: [],
+
     validTill: "31-12-2021",
   },
   {
@@ -193,6 +197,7 @@ const offers: Offer[] = [
     },
     includes: [],
     terms: [],
+    discount: 20,
     validTill: "31-12-2021",
   },
 ];
