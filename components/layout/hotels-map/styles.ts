@@ -14,6 +14,7 @@ const Section = styled.section`
 `;
 
 const ContentWrapper = styled.div`
+  justify-self: end;
   grid-area: tx;
   display: flex;
   flex-direction: column;
@@ -129,52 +130,12 @@ const CardContent = styled.div`
   padding: 3rem;
 `;
 
-const CardHeading = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: ${(props) => props.theme.colors.primary};
-`;
-
-const CardSubHeading = styled.h4`
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.blackLight};
+const HeadingGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-bottom: 2rem;
-`;
-
-const CardButton = styled.a`
-  outline: none;
-  border: none;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: ${(props) => props.theme.colors.blackLight};
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 40%;
-    background-color: ${(props) => props.theme.colors.primaryMedium};
-    transform-origin: center bottom;
-    transition: transform 0.2s ease-in-out;
-    z-index: -1;
-  }
-
-  &:hover {
-    &::before {
-      transform: scaleY(2);
-    }
-  }
 `;
 
 const cardVariants: Variants = {
@@ -202,9 +163,7 @@ export {
   CloseButton,
   Image,
   CardContent,
-  CardHeading,
-  CardSubHeading,
-  CardButton,
+  HeadingGroup,
   cardVariants,
   Marker,
 };

@@ -2,6 +2,9 @@ import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { MouseEvent, useCallback, useState } from "react";
 import ButtonPrimary from "../../buttons/button-primary";
+import ButtonSecondary from "../../buttons/button-secondary";
+import HeadingSub from "../../headings/heading-sub";
+import HeadingTertiary from "../../headings/heading-tertiary";
 import {
   Section,
   ContentWrapper,
@@ -12,9 +15,7 @@ import {
   MapCard,
   Image,
   CardContent,
-  CardHeading,
-  CardSubHeading,
-  CardButton,
+  HeadingGroup,
   cardVariants,
   CloseButton,
 } from "./styles";
@@ -90,13 +91,14 @@ const HotelsMap: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
                 />
               </picture>
               <CardContent>
-                <CardHeading>{selected.name}</CardHeading>
-                <CardSubHeading>{selected.location.place}</CardSubHeading>
-                <Link href={`/hotels/${selected.id}`}>
-                  <CardButton>
-                    <span>View Hotel</span>
-                  </CardButton>
-                </Link>
+                <HeadingGroup>
+                  <HeadingTertiary>{selected.name}</HeadingTertiary>
+                  <HeadingSub small>{selected.location.place}</HeadingSub>
+                </HeadingGroup>
+
+                <ButtonSecondary route={`/hotels/${selected.id}`}>
+                  View Hotel
+                </ButtonSecondary>
               </CardContent>
             </MapCard>
           )}
