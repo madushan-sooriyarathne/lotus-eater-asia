@@ -8,7 +8,7 @@ const Content = styled.main`
   grid-template-columns:
     [full-start] minmax(5rem, 1fr) [content-start] repeat(
       8,
-      [col-start] minmax(min-content, 1fr) [col-end]
+      [col-start] minmax(min-content, 18rem) [col-end]
     )
     [content-end] minmax(5rem, 1fr) [full-end];
   grid-auto-rows: min-content;
