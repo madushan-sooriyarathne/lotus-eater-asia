@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
