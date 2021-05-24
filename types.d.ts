@@ -33,6 +33,7 @@ declare global {
     terms: string[];
     price?: number;
     discount?: number;
+    currency?: string;
     validTill: string;
   }
 
