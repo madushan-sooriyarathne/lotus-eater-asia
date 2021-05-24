@@ -1,6 +1,16 @@
-import HeadingSecondary from "../headings/heading-secondary";
+import ButtonSecondary from "../buttons/button-secondary";
+import HeadingTertiary from "../headings/heading-tertiary";
 import Paragraph from "../paragraph";
-import { Card, ContentWrapper, Image } from "./styles";
+import {
+  Card,
+  ContentWrapper,
+  Image,
+  TitleWrapper,
+  PriceGroup,
+  ButtonWrapper,
+  DiscountLabel,
+  Price,
+} from "./styles";
 
 interface Props {
   offer: Offer;
@@ -14,8 +24,21 @@ const OfferCard: React.FC<Props> = ({ offer }: Props): JSX.Element => {
         <Image src={offer.image.fallback} alt={offer.image.alt} />
       </picture>
       <ContentWrapper>
-        <HeadingSecondary>{offer.title}</HeadingSecondary>
-        <Paragraph>{offer.description}</Paragraph>
+        <TitleWrapper>
+          <HeadingTertiary>{offer.title}</HeadingTertiary>
+          <PriceGroup>
+            {offer.price && <Price>{`${offer.currency} ${offer.price}`}</Price>}
+            {offer.discount && (
+              <DiscountLabel>{`${offer.discount}% Off`}</DiscountLabel>
+            )}
+          </PriceGroup>
+        </TitleWrapper>
+        <Paragraph alignment="left">{offer.description}</Paragraph>
+        <ButtonWrapper>
+          <ButtonSecondary route={`/offers/${offer.id}`}>
+            Learn More
+          </ButtonSecondary>
+        </ButtonWrapper>
       </ContentWrapper>
     </Card>
   );
