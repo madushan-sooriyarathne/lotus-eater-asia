@@ -24,6 +24,18 @@ declare global {
     images: Image[];
   }
 
+  interface Offer {
+    title: string;
+    id: string;
+    description: string;
+    image: Image;
+    includes: string[];
+    terms: string[];
+    price?: number;
+    discount?: number;
+    validTill: string;
+  }
+
   interface Hotel {
     name: string;
     id: string;
@@ -31,6 +43,7 @@ declare global {
     rooms: Room[];
     experiences: Experience[];
     images: Image[];
+    offers?: Offer[];
     location: {
       place: string;
       address: string;
