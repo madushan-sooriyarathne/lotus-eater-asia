@@ -11,8 +11,6 @@ const Section = styled.section`
 
   align-items: center;
   justify-items: start;
-
-  padding: 0 5rem;
 `;
 
 const Image = styled.picture`
