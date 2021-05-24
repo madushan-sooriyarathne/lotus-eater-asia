@@ -43,7 +43,7 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
 
   return (
     <SliderWrapper>
-      <AnimatePresence custom={direction} initial={true}>
+      <AnimatePresence custom={direction} initial={false}>
         <Overlay>
           <Logo
             src="/assets/logos/lotus-eater-asia-logo-white.svg"
@@ -62,6 +62,7 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
           <SliderAnchorSet>
             {slides.map((slide, index) => (
               <SliderAnchorItem
+                key={index}
                 onClick={() => {
                   clearTimeout(timeout);
                   handleClick(index);
