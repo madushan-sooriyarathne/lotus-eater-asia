@@ -180,7 +180,7 @@ const SliderAnchorBorder = styled(motion.circle)<SliderAnchorIconProps>`
   animation: ${(props) =>
     props.active &&
     css`
-      ${animate} 6s cubic-bezier(0,0,1,1) infinite
+      ${animate} 6s cubic-bezier(0,0,1,1)
     `};
 `;
 
