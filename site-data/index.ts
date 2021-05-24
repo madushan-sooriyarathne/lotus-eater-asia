@@ -154,4 +154,47 @@ const hotels: Hotel[] = [
   },
 ];
 
-export { slides, hotelsSlider, hotels };
+const offers: Offer[] = [
+  {
+    title: "3 for 2",
+    description: "Stay 3 Nights for a price of 2 Nights",
+    id: "3-for-2",
+    image: {
+      nextGen: "/assets/img/bg-boutique-87.avif",
+      fallback: "/assets/img/bg-boutique-87.avif",
+      alt: "Stay 3 Nights for price of 2 Nights offer cover image",
+    },
+    includes: [],
+    terms: [],
+    validTill: "31-12-2021",
+  },
+  {
+    title: "Honeymoon Offer",
+    description: "Book you honeymoon escape with our special honeymoon package",
+    id: "honeymoon-offer",
+    image: {
+      nextGen: "/assets/img/singhagiri-brunch.avif",
+      fallback: "/assets/img/singhagiri-brunch.avif",
+      alt: "Stay 3 Nights for price of 2 Nights offer cover image",
+    },
+    includes: [],
+    terms: [],
+    validTill: "31-12-2021",
+  },
+  {
+    title: "Early Bird Offer",
+    description:
+      "Book before 31st of August to enjoy 20% off in All Properties",
+    id: "early-bird",
+    image: {
+      nextGen: "/assets/img/singhagiri-room.avif",
+      fallback: "/assets/img/singhagiri-room.avif",
+      alt: "Stay 3 Nights for price of 2 Nights offer cover image",
+    },
+    includes: [],
+    terms: [],
+    validTill: "31-12-2021",
+  },
+];
+
+export { slides, hotelsSlider, hotels, offers };
