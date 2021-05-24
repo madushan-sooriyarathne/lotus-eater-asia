@@ -44,6 +44,12 @@ const NavItem = styled.a`
   color: ${(props) => props.theme.colors.blackLight};
 
   cursor: pointer;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.black};
+  }
 `;
 
 const SocialIconWrapper = styled.div`
@@ -63,7 +69,13 @@ const SocialIconWrapper = styled.div`
 const SocialIcon = styled.svg`
   width: 3rem;
   height: 3rem;
-  fill: ${(props) => props.theme.colors.black};
+  fill: ${(props) => props.theme.colors.blackLight};
+  transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out 0.1s;
+
+  &:hover {
+    transform: scale(1.05);
+    fill: ${(props) => props.theme.colors.primaryMedium};
+  }
 `;
 
 const CreditWrapper = styled.div`
@@ -77,7 +89,7 @@ const CreditWrapper = styled.div`
 `;
 
 const Credit = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: ${(props) => props.theme.colors.blackLight};
