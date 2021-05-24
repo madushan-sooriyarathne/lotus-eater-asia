@@ -35,14 +35,14 @@ const Footer: React.FC = (): JSX.Element => {
           alt="Lotus Eater Asia Logo"
         />
         {navLinks.map((link) => (
-          <Link href={link.route}>
+          <Link href={link.route} key={link.route}>
             <NavItem>{link.name}</NavItem>
           </Link>
         ))}
       </NavigationWrapper>
       <SocialIconWrapper>
         {SocialLinks.map((social) => (
-          <a href={social.link} target="_blank">
+          <a href={social.link} target="_blank" key={social.name}>
             <SocialIcon>
               <use
                 xlinkHref={`/assets/svg/sprites.svg#icon-${social.name.toLowerCase()}`}
