@@ -63,7 +63,7 @@ const HotelsMap: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
           <br />
           <span>Sri Lanka.</span>
         </ContentText>
-        <ButtonPrimary>View Hotels</ButtonPrimary>
+        <ButtonPrimary route="/hotels">View Hotels</ButtonPrimary>
       </ContentWrapper>
       <MapWrapper>
         <AnimatePresence initial={true}>
