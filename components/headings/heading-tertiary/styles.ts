@@ -2,17 +2,15 @@ import styled from "styled-components";
 
 interface HeadingProps {
   alignment: TextAlignment;
-  light?: boolean;
 }
 
 const Heading = styled.h1<HeadingProps>`
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: ${(props) =>
-    props.light ? props.theme.colors.white : props.theme.colors.blackLight};
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  /* text-transform: uppercase; */
+  color: ${(props) => props.theme.colors.primary};
   text-align: ${(props) => props.alignment};
 `;
 
