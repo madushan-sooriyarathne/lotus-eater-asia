@@ -63,8 +63,8 @@ const ContentSlider: React.FC<Props> = ({ items }: Props): JSX.Element => {
             />
           </picture>
         </PrimaryImage>
-        {/* </AnimatePresence>
-      <AnimatePresence initial={true}> */}
+      </AnimatePresence>
+      <AnimatePresence initial={true}>
         <SecondaryImage>
           <picture>
             <source
@@ -100,7 +100,9 @@ const ContentSlider: React.FC<Props> = ({ items }: Props): JSX.Element => {
             <HeadingTertiary>{items[page].content.subtitle}</HeadingTertiary>
           </TitleWrapper>
           <Paragraph>{items[page].content.description}</Paragraph>
-          <ButtonPrimary></ButtonPrimary>
+          <ButtonPrimary route={items[page].content.route}>
+            View Hotel
+          </ButtonPrimary>
         </ContentWrapper>
       </AnimatePresence>
     </Container>
