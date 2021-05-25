@@ -31,6 +31,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
             onChange={updateEmail}
             type="email"
             value={email}
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           ></InputField>
           <ActionButton onClick={() => {}} loading={true}>
             Subscribe
