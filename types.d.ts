@@ -1,5 +1,8 @@
+import { FormEvent } from "react";
+
 declare global {
   type TextAlignment = "left" | "right" | "center" | "justify";
+  type FlexAlignment = "flex-start" | "center" | "flex-end";
 
   interface Image {
     nextGen: string;
@@ -65,6 +68,8 @@ declare global {
       route: string;
     };
   }
+
+  type InputEventType = FormEvent<HTMLInputElement | HTMLTextAreaElement>;
 }
 
 export {};
