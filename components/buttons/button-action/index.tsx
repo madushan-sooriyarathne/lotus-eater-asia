@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import LoadingSpinner from "../../loading-spinnter";
 
-import { Button, ButtonText } from "./styles";
+import { Button, ButtonText, SpinnerWrapper } from "./styles";
 
 interface Props {
   children: ReactNode;
@@ -19,7 +19,9 @@ const ActionButton: React.FC<Props> = ({
   return (
     <Button onClick={onClick}>
       <ButtonText>{children}</ButtonText>
-      {loading && <LoadingSpinner />}
+      <SpinnerWrapper loading={loading}>
+        <LoadingSpinner />
+      </SpinnerWrapper>
     </Button>
   );
 };

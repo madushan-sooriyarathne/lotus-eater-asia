@@ -19,4 +19,12 @@ const ButtonText = styled.p`
   color: ${(props) => props.theme.colors.primary};
 `;
 
-export { Button, ButtonText };
+interface SpinnerWrapperProps {
+  loading: boolean;
+}
+
+const SpinnerWrapper = styled.div<SpinnerWrapperProps>`
+  opacity: ${(props) => (props.loading ? 1 : 0)};
+`;
+
+export { Button, ButtonText, SpinnerWrapper };
