@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 
 import { useInput } from "../../../hooks";
@@ -16,6 +17,20 @@ const NewsletterSection: React.FC = (): JSX.Element => {
   // email field state
   const [email, updateEmail, resetEmail] = useInput("");
 
+  // state for the loading spinner
+  const [loading, setLoading] = useState<boolean>(false);
+
+  // handle email subscription
+  const handleSubscribe = (): void => {
+    // TODO: Add the email subscribing logic
+    // mimicking the async process
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      resetEmail();
+    }, 2000);
+  };
+
   return (
     <Section>
       <ContentGroup>
@@ -33,7 +48,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
             value={email}
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           ></InputField>
-          <ActionButton onClick={() => {}} loading={true}>
+          <ActionButton onClick={handleSubscribe} loading={loading}>
             Subscribe
           </ActionButton>
         </InputFieldWrapper>
