@@ -1,11 +1,11 @@
-import { DragEvent, FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 
-const useInput = (initialText: string = "") => {
+const useInput = (
+  initialText: string = ""
+): [string, (event: InputEventType) => void, () => void] => {
   const [value, setValue] = useState<string>(initialText);
 
-  const updateValue = (
-    event: FormEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
+  const updateValue = (event: InputEventType): void => {
     setValue((event.target as HTMLInputElement | HTMLTextAreaElement).value);
   };
 
