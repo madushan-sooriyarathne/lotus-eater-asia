@@ -44,8 +44,12 @@ const Input = styled.input`
   border: ${(props) => `2px solid ${props.theme.colors.primary}`};
   outline: none;
 
-  &:invalid {
+  &:not(:placeholder-shown):invalid {
     border: ${(props) => `2px solid ${props.theme.colors.danger}`};
+  }
+
+  &:not(:placeholder-shown):valid {
+    border: ${(props) => `2px solid ${props.theme.colors.success}`};
   }
 
   &:focus {
