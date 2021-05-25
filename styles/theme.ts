@@ -1,3 +1,4 @@
+import { emitWarning } from "process";
 import "styled-components";
 import { DefaultTheme } from "styled-components";
 
@@ -14,6 +15,9 @@ declare module "styled-components" {
       secondary: string;
       secondaryMedium: string;
       secondaryLight: string;
+      danger: string;
+      warning: string;
+      success: string;
     };
     fonts: {
       primary: string;
@@ -42,6 +46,9 @@ const theme: DefaultTheme = {
     secondary: "#ffbe1c",
     secondaryMedium: "#ffdf8e",
     secondaryLight: "#fff8e6",
+    success: "#62a844",
+    warning: "#f0c220",
+    danger: "#e24444",
   },
   fonts: {
     primary:
