@@ -20,11 +20,11 @@ const ButtonText = styled.p`
 `;
 
 interface SpinnerWrapperProps {
-  loading: boolean;
+  $loading: boolean;
 }
 
 const SpinnerWrapper = styled.div<SpinnerWrapperProps>`
-  opacity: ${(props) => (props.loading ? 1 : 0)};
+  opacity: ${(props) => (props.$loading ? 1 : 0)};
 `;
 
 export { Button, ButtonText, SpinnerWrapper };

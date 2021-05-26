@@ -19,7 +19,7 @@ const ActionButton: React.FC<Props> = ({
   return (
     <Button onClick={onClick}>
       <ButtonText>{children}</ButtonText>
-      <SpinnerWrapper loading={loading}>
+      <SpinnerWrapper $loading={loading}>
         <LoadingSpinner />
       </SpinnerWrapper>
     </Button>
