@@ -11,20 +11,7 @@ import {
   Credit,
 } from "./styles";
 
-const navLinks = [
-  { name: "Hotels", route: "/hotels" },
-  { name: "Experiences", route: "/experiences" },
-  { name: "Offers", route: "/offers" },
-  { name: "Contact", route: "/contact" },
-  { name: "Privacy", route: "/privacy" },
-  { name: "Terms", route: "/terms" },
-];
-
-const SocialLinks = [
-  { name: "Facebook", link: "https://facebook.com/madushan-sooriyarathne" },
-  { name: "Instagram", link: "https://instagram.com/iammadushan" },
-  { name: "LinkedIn", link: "https://linkedin.com/madushan-sooriyarathne" },
-];
+import { navLinks, socialLinks } from "../../../site-data";
 
 const Footer: React.FC = (): JSX.Element => {
   return (
@@ -41,7 +28,7 @@ const Footer: React.FC = (): JSX.Element => {
         ))}
       </NavigationWrapper>
       <SocialIconWrapper>
-        {SocialLinks.map((social) => (
+        {socialLinks.map((social) => (
           <a href={social.link} target="_blank" key={social.name}>
             <SocialIcon>
               <use

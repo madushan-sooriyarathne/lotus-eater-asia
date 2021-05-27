@@ -202,4 +202,19 @@ const offers: Offer[] = [
   },
 ];
 
-export { slides, hotelsSlider, hotels, offers };
+const navLinks: NavLink[] = [
+  { name: "Hotels", route: "/hotels" },
+  { name: "Experiences", route: "/experiences" },
+  { name: "Offers", route: "/offers" },
+  { name: "Contact", route: "/contact" },
+  { name: "Privacy", route: "/privacy" },
+  { name: "Terms", route: "/terms" },
+];
+
+const socialLinks: SocialIcon[] = [
+  { name: "Facebook", link: "https://facebook.com/madushan-sooriyarathne" },
+  { name: "Instagram", link: "https://instagram.com/iammadushan" },
+  { name: "LinkedIn", link: "https://linkedin.com/madushan-sooriyarathne" },
+];
+
+export { slides, hotelsSlider, hotels, offers, navLinks, socialLinks };
