@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { Content } from "./styles";
 import Footer from "../footer";
+import NavBar from "../nav-bar";
 
 interface Props {
   children: ReactNode;
@@ -18,6 +19,7 @@ const Container: React.FC<Props> = ({
       <Head>
         <title>{title}</title>
       </Head>
+      <NavBar />
       {/* Header Here */}
       {children}
       {/* Footer Here */}
