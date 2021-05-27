@@ -66,7 +66,7 @@ const theme: DefaultTheme = {
   },
   shadows: {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
-    spread: " 0 0 20px 0 rgba(0, 0, 0, 0.25)",
+    spread: " 0 0 20px 0 rgba(0, 0, 0, 0.15)",
   },
 };
 
