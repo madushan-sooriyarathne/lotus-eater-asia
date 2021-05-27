@@ -21,7 +21,13 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
         letter-spacing: 0.5px;
         color: ${(props) => props.theme.colors.black};
         scroll-behavior: smooth;
+        overscroll-behavior: touch;
+        -webkit-overflow-scrolling: touch;
         box-sizing: border-box;
+
+        text-rendering: optimizeLegibility;
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
 
         // TODO: REmove this
         @media only screen and (max-width: 1300px) {
