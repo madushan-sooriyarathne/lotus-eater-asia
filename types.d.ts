@@ -58,6 +58,16 @@ declare global {
     };
   }
 
+  interface NavLink {
+    name: string;
+    route: string;
+  }
+
+  interface SocialIcon {
+    name: string;
+    link: string;
+  }
+
   interface SliderContent {
     primaryImage: Image;
     secondaryImage: Image;
