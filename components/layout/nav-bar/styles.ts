@@ -1,12 +1,16 @@
 import { motion, Variants } from "framer-motion";
 import styled, { css } from "styled-components";
 
-const Nav = styled.nav`
+interface NavProps {
+  open: boolean;
+}
+
+const Nav = styled.nav<NavProps>`
   display: grid;
   grid-template-columns: repeat(2, min-content);
   align-items: center;
   justify-items: center;
-  box-shadow: ${(props) => props.theme.shadows.spread};
+  box-shadow: ${(props) => (!props.open ? props.theme.shadows.spread : "none")};
 
   position: fixed;
   top: 5rem;
@@ -218,13 +222,13 @@ const NavLinkContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 
-  & > *:not(:last-child) {
+  /* & > *:not(:last-child) {
     margin-right: 5rem;
-  }
+  } */
 `;
 
 const NavLinkMain = styled(motion.a)`
@@ -234,6 +238,52 @@ const NavLinkMain = styled(motion.a)`
   letter-spacing: 2px;
   line-height: 1;
   color: ${(props) => props.theme.colors.white};
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    background-color: ${(props) => props.theme.colors.primary};
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+`;
+
+const LinkSeparator = styled(motion.span)`
+  font-size: 7rem;
+  font-family: ${(props) => props.theme.fonts.secondary};
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.white};
+  margin: 0 5rem 0 3rem;
+`;
+
+const ContactDetails = styled(motion.p)`
+  grid-area: co;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  color: ${(props) => props.theme.colors.white};
+  letter-spacing: 1px;
+  line-height: 150%;
+
+  & > b {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
 `;
 
 // Motion Variants
@@ -286,6 +336,21 @@ const OverlayMaskVariant: Variants = {
 const OverlayChildrenVariant: Variants = {
   start: {
     opacity: 0,
+    y: "15px",
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+  },
+  exit: {
+    opacity: 0,
+    y: "-15px",
+  },
+};
+
+const overlayLogoVariant: Variants = {
+  start: {
+    opacity: 0,
     y: "10px",
   },
   enter: {
@@ -310,6 +375,7 @@ const backgroundVariant: Variants = {
   },
   exit: {
     opacity: 0,
+    scale: 1,
     transition: { duration: 1 },
   },
 };
@@ -323,6 +389,8 @@ export {
   OverlayLogo,
   NavLinkContainer,
   NavLinkMain,
+  LinkSeparator,
+  ContactDetails,
   NavLinkWrapper,
   NavLink,
   SocialIcon,
@@ -333,5 +401,6 @@ export {
   OpenButtonLineVariants,
   OverlayMaskVariant,
   OverlayChildrenVariant,
+  overlayLogoVariant,
   backgroundVariant,
 };

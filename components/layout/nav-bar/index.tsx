@@ -20,10 +20,13 @@ import {
   NavOverlayMask,
   OverlayMaskVariant,
   OverlayChildrenVariant,
+  overlayLogoVariant,
   OverlayBackground,
   backgroundVariant,
   OverlayBackgroundLayer,
   OverlayBackgroundImage,
+  LinkSeparator,
+  ContactDetails,
 } from "./styles";
 
 const NavBar: React.FC = (): JSX.Element => {
@@ -56,6 +59,7 @@ const NavBar: React.FC = (): JSX.Element => {
 
   return (
     <>
+      {/*  Sliding menu overlay */}
       <AnimatePresence>
         {menuOpen && (
           <NavOverlayMask
@@ -78,26 +82,40 @@ const NavBar: React.FC = (): JSX.Element => {
             <OverlayLogo
               src="/assets/logos/lotus-eater-asia-logo-white.svg"
               alt="Lotus Eater Asia - Sri Lanka's exclusive boutique hotel collection"
-              variants={OverlayChildrenVariant}
+              variants={overlayLogoVariant}
               key="overlay-logo"
             ></OverlayLogo>
             <NavLinkContainer>
-              {navLinks.map((link) => (
-                <Link href={link.route}>
-                  <NavLinkMain
-                    variants={OverlayChildrenVariant}
-                    key={`overlay-nav-link-${link.name}`}
-                  >
-                    {link.name}
-                  </NavLinkMain>
-                </Link>
+              {navLinks.map((link: NavLink, index: number) => (
+                <>
+                  <Link href={link.route}>
+                    <NavLinkMain
+                      variants={OverlayChildrenVariant}
+                      key={`overlay-nav-link-${index}`}
+                    >
+                      {link.name}
+                    </NavLinkMain>
+                  </Link>
+                  {index < navLinks.length - 1 && (
+                    <LinkSeparator
+                      variants={OverlayChildrenVariant}
+                      key={`overlay-nav-link-separator-${index}`}
+                    >
+                      /
+                    </LinkSeparator>
+                  )}
+                </>
               ))}
             </NavLinkContainer>
+            <ContactDetails>
+              <b>Lotus Eater Asia Hotels.</b>
+              <br /> +94 77 777 2616 / info@lotuseaterasia.com
+            </ContactDetails>
           </NavOverlayMask>
         )}
       </AnimatePresence>
-
-      <Nav>
+      {/* Always visible floating nav bar with hamburger menu button */}
+      <Nav open={menuOpen}>
         <NavLinkWrapper open={!scrolled || menuOpen}>
           <Link href="/contact">
             <NavLink>Contact</NavLink>
