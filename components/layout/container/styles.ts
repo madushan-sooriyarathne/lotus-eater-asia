@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const Content = styled.main`
+  grid-area: co;
   width: 100%;
-  min-height: 100vh;
+  height: auto;
 
   display: grid;
   grid-template-columns:
@@ -15,4 +16,17 @@ const Content = styled.main`
   row-gap: 15rem;
 `;
 
-export { Content };
+const Page = styled.div`
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  grid-template-areas:
+    "co"
+    "fo";
+  gap: 15rem;
+`;
+
+export { Content, Page };

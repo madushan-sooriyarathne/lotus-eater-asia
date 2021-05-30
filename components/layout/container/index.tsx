@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
 import Head from "next/head";
 
-import { Content } from "./styles";
 import Footer from "../footer";
 import NavBar from "../nav-bar";
+
+import { Content, Page } from "./styles";
 
 interface Props {
   children: ReactNode;
@@ -15,16 +16,14 @@ const Container: React.FC<Props> = ({
   title,
 }: Props): JSX.Element => {
   return (
-    <Content>
+    <Page>
       <Head>
         <title>{title}</title>
       </Head>
       <NavBar />
-      {/* Header Here */}
-      {children}
-      {/* Footer Here */}
+      <Content>{children}</Content>
       <Footer />
-    </Content>
+    </Page>
   );
 };
 
