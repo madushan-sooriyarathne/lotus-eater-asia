@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Section = styled.footer`
-  grid-column: full-start / full-end;
+  grid-area: fo;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
