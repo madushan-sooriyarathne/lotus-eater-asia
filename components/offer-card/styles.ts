@@ -19,11 +19,10 @@ const Card = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageWrapper = styled.div`
   grid-area: im;
   width: 100%;
   height: 30rem;
-  object-fit: cover;
 `;
 
 const ContentWrapper = styled.div`
@@ -78,7 +77,7 @@ const ButtonWrapper = styled.div`
 export {
   Card,
   ContentWrapper,
-  Image,
+  ImageWrapper,
   TitleWrapper,
   PriceGroup,
   DiscountLabel,

@@ -1,15 +1,16 @@
 import ButtonSecondary from "../buttons/button-secondary";
 import HeadingTertiary from "../headings/heading-tertiary";
+import ImageComponent from "../image";
 import Paragraph from "../paragraph";
 import {
   Card,
   ContentWrapper,
-  Image,
   TitleWrapper,
   PriceGroup,
   ButtonWrapper,
   DiscountLabel,
   Price,
+  ImageWrapper,
 } from "./styles";
 
 interface Props {
@@ -19,10 +20,9 @@ interface Props {
 const OfferCard: React.FC<Props> = ({ offer }: Props): JSX.Element => {
   return (
     <Card>
-      <picture>
-        <source srcSet={offer.image.nextGen} type="image/avif" />
-        <Image src={offer.image.fallback} alt={offer.image.alt} />
-      </picture>
+      <ImageWrapper>
+        <ImageComponent image={offer.image} />
+      </ImageWrapper>
       <ContentWrapper>
         <TitleWrapper>
           <HeadingTertiary>{offer.title}</HeadingTertiary>
