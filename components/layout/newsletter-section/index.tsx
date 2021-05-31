@@ -8,10 +8,9 @@ import HeadingSecondary from "../../headings/heading-secondary";
 import HeadingTertiary from "../../headings/heading-tertiary";
 import InputField from "../../input-field";
 import Paragraph from "../../paragraph";
-import { Para } from "../../paragraph/styles";
 import TextGroup from "../../text-group";
 
-import { ContentGroup, Image, InputFieldWrapper, Section } from "./styles";
+import { ContentGroup, InputFieldWrapper, Section } from "./styles";
 import ImageComponent from "../../image";
 
 const NewsletterSection: React.FC = (): JSX.Element => {
