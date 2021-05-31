@@ -33,7 +33,7 @@ const MouseScrollIndicator: React.FC<Props> = ({
               height="203"
               rx="65"
               stroke="black"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <rect
               id="mouse-wheel"
