@@ -13,7 +13,7 @@ const ImageComponent: React.FC<Props> = ({
 }: Props): JSX.Element => {
   return (
     <picture>
-      <source srcSet={image.nextGen} />
+      <source srcSet={image.nextGen} type="image/avif" />
       <ImgBox x={x} y={y} src={image.fallback} alt={image.alt} />
     </picture>
   );
