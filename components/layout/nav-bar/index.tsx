@@ -19,7 +19,8 @@ import {
   SocialIcon,
   NavOverlayMask,
   OverlayMaskVariant,
-  OverlayChildrenVariant,
+  OverlayNavLinksVariant,
+  NavLinkSeparatorVariant,
   overlayLogoVariant,
   OverlayBackground,
   backgroundVariant,
@@ -90,7 +91,7 @@ const NavBar: React.FC = (): JSX.Element => {
                 <>
                   <Link href={link.route}>
                     <NavLinkMain
-                      variants={OverlayChildrenVariant}
+                      variants={OverlayNavLinksVariant}
                       key={`overlay-nav-link-${index}`}
                     >
                       {link.name}
@@ -98,7 +99,7 @@ const NavBar: React.FC = (): JSX.Element => {
                   </Link>
                   {index < navLinks.length - 1 && (
                     <LinkSeparator
-                      variants={OverlayChildrenVariant}
+                      variants={NavLinkSeparatorVariant}
                       key={`overlay-nav-link-separator-${index}`}
                     >
                       /
@@ -107,7 +108,7 @@ const NavBar: React.FC = (): JSX.Element => {
                 </>
               ))}
             </NavLinkContainer>
-            <ContactDetails>
+            <ContactDetails variants={overlayLogoVariant} key="overlay-contact">
               <b>Lotus Eater Asia Hotels.</b>
               <br /> +94 77 777 2616 / info@lotuseaterasia.com
             </ContactDetails>

@@ -220,15 +220,14 @@ const OverlayLogo = styled(motion.img)`
 const NavLinkContainer = styled.div`
   grid-area: na;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
+  align-items: center;
+  row-gap: 5rem;
+
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  /* & > *:not(:last-child) {
-    margin-right: 5rem;
-  } */
 `;
 
 const NavLinkMain = styled(motion.a)`
@@ -333,7 +332,7 @@ const OverlayMaskVariant: Variants = {
   },
 };
 
-const OverlayChildrenVariant: Variants = {
+const OverlayNavLinksVariant: Variants = {
   start: {
     opacity: 0,
     y: "15px",
@@ -345,6 +344,18 @@ const OverlayChildrenVariant: Variants = {
   exit: {
     opacity: 0,
     y: "-15px",
+  },
+};
+
+const NavLinkSeparatorVariant: Variants = {
+  start: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
   },
 };
 
@@ -400,7 +411,8 @@ export {
   closeButtonLineTwoVariant,
   OpenButtonLineVariants,
   OverlayMaskVariant,
-  OverlayChildrenVariant,
+  OverlayNavLinksVariant,
+  NavLinkSeparatorVariant,
   overlayLogoVariant,
   backgroundVariant,
 };
