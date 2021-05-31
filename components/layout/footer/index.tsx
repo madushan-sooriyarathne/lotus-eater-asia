@@ -12,6 +12,7 @@ import {
 } from "./styles";
 
 import { navLinks, socialLinks } from "../../../site-data";
+import { link } from "fs";
 
 const Footer: React.FC = (): JSX.Element => {
   return (
@@ -26,6 +27,15 @@ const Footer: React.FC = (): JSX.Element => {
             <NavItem>{link.name}</NavItem>
           </Link>
         ))}
+
+        {/* Manually adding terms & privacy links */}
+        <Link href="/privacy">
+          <NavItem>Privacy</NavItem>
+        </Link>
+
+        <Link href="/terms">
+          <NavItem>Terms</NavItem>
+        </Link>
       </NavigationWrapper>
       <SocialIconWrapper>
         {socialLinks.map((social) => (
