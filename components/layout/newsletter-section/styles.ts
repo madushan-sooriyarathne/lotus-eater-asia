@@ -41,10 +41,4 @@ const InputFieldWrapper = styled.div`
   justify-items: start;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-export { Section, ContentGroup, TitleGroup, InputFieldWrapper, Image };
+export { Section, ContentGroup, TitleGroup, InputFieldWrapper };

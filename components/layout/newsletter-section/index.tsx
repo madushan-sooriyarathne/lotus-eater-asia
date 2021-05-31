@@ -12,6 +12,7 @@ import { Para } from "../../paragraph/styles";
 import TextGroup from "../../text-group";
 
 import { ContentGroup, Image, InputFieldWrapper, Section } from "./styles";
+import ImageComponent from "../../image";
 
 const NewsletterSection: React.FC = (): JSX.Element => {
   // email field state
@@ -69,16 +70,13 @@ const NewsletterSection: React.FC = (): JSX.Element => {
           </Paragraph>
         </TextGroup>
       </ContentGroup>
-      <picture>
-        <source
-          srcSet="/assets/img/singhagiri-fireplace.avif"
-          type="image/avif"
-        ></source>
-        <Image
-          src="/assets/img/singhagiri-fireplace.avif"
-          alt="Singhagiri Boutiuque Hotel Nuwara Eliya"
-        ></Image>
-      </picture>
+      <ImageComponent
+        image={{
+          nextGen: "/assets/img/singhagiri-fireplace.avif",
+          fallback: "/assets/img/singhagiri-fireplace.avif",
+          alt: "Singhagiri Boutiuque Hotel Nuwara Eliya",
+        }}
+      />
     </Section>
   );
 };
