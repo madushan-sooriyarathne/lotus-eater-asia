@@ -1,6 +1,6 @@
-import ButtonPrimary from "../../buttons/button-primary";
-import HeadingPrimary from "../../headings/heading-primary";
-import OfferCard from "../../offer-card";
+import ButtonPrimary from "../../../buttons/button-primary";
+import HeadingPrimary from "../../../headings/heading-primary";
+import OfferCard from "../../../offer-card";
 import { Section, OfferContainer } from "./styles";
 
 interface Props {

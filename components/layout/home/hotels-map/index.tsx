@@ -1,5 +1,4 @@
 import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { MouseEvent, useCallback, useState } from "react";
 import ButtonPrimary from "../../../buttons/button-primary";
 import ButtonSecondary from "../../../buttons/button-secondary";

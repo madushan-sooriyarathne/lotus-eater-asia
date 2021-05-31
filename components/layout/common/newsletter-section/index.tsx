@@ -1,17 +1,17 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { useInput } from "../../../hooks";
-import ActionButton from "../../buttons/button-action";
+import { useInput } from "../../../../hooks";
+import ActionButton from "../../../buttons/button-action";
 
-import HeadingSecondary from "../../headings/heading-secondary";
-import HeadingTertiary from "../../headings/heading-tertiary";
-import InputField from "../../input-field";
-import Paragraph from "../../paragraph";
-import TextGroup from "../../text-group";
+import HeadingSecondary from "../../../headings/heading-secondary";
+import HeadingTertiary from "../../../headings/heading-tertiary";
+import InputField from "../../../input-field";
+import Paragraph from "../../../paragraph";
+import TextGroup from "../../../text-group";
 
 import { ContentGroup, InputFieldWrapper, Section } from "./styles";
-import ImageComponent from "../../image";
+import ImageComponent from "../../../image";
 
 const NewsletterSection: React.FC = (): JSX.Element => {
   // email field state
