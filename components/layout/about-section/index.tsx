@@ -1,7 +1,13 @@
 import HeadingPrimary from "../../headings/heading-primary";
 import HeadingSub from "../../headings/heading-sub";
+import ImageComponent from "../../image";
 import Paragraph from "../../paragraph";
-import { Section, Image, ContentWrapper, ParagraphWrapper } from "./styles";
+import {
+  Section,
+  ImageWrapper,
+  ContentWrapper,
+  ParagraphWrapper,
+} from "./styles";
 
 const AboutSection: React.FC = (): JSX.Element => {
   return (
@@ -23,13 +29,15 @@ const AboutSection: React.FC = (): JSX.Element => {
           </Paragraph>
         </ParagraphWrapper>
       </ContentWrapper>
-      <Image>
-        <source type="image/avif" srcSet="/assets/img/bg-boutique-87.avif" />
-        <img
-          src="/assets/img/bg-boutique-87.jpg"
-          alt="About us section image"
+      <ImageWrapper>
+        <ImageComponent
+          image={{
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "About us section Image",
+          }}
         />
-      </Image>
+      </ImageWrapper>
     </Section>
   );
 };

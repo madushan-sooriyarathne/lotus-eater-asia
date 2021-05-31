@@ -13,7 +13,7 @@ const Section = styled.section`
   justify-items: start;
 `;
 
-const Image = styled.picture`
+const ImageWrapper = styled.div`
   grid-area: im;
   width: 100%;
   height: 50vh;
@@ -23,17 +23,14 @@ const Image = styled.picture`
 
   &:hover {
     box-shadow: ${(props) => props.theme.shadows.spread};
-  }
 
-  & > img,
-  & > source {
-    min-width: 100%;
-    height: 100%;
-    transition: transform 0.2s ease-in-out 0.1s;
-
-    &:hover {
+    & img {
       transform: scale(1.05);
     }
+  }
+
+  & img {
+    transition: transform 0.2s ease-in-out 0.1s;
   }
 `;
 
@@ -50,4 +47,4 @@ const ParagraphWrapper = styled.div`
   margin-top: 5rem;
 `;
 
-export { Section, Image, ContentWrapper, ParagraphWrapper };
+export { Section, ImageWrapper, ContentWrapper, ParagraphWrapper };
