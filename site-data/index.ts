@@ -204,11 +204,8 @@ const offers: Offer[] = [
 
 const navLinks: NavLink[] = [
   { name: "Hotels", route: "/hotels" },
-  { name: "Experiences", route: "/experiences" },
   { name: "Offers", route: "/offers" },
   { name: "Contact", route: "/contact" },
-  { name: "Privacy", route: "/privacy" },
-  { name: "Terms", route: "/terms" },
 ];
 
 const socialLinks: SocialIcon[] = [
