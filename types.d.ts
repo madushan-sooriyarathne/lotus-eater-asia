@@ -16,8 +16,10 @@ declare global {
     images: Image[];
     description: string;
     beds: string;
-    size: string;
+    size: number;
     features: string[];
+    currency: "USD" | "LKR";
+    bar: number;
   }
 
   interface Experience {
