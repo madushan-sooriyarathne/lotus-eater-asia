@@ -87,9 +87,66 @@ const hotels: Hotel[] = [
   {
     name: "Casa Heliconia",
     id: "casa-heliconia",
-    rooms: [],
+    rooms: [
+      {
+        bar: 150,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Situated in direct view of the adjoining Buddhist temple with its pristine white stupa, this chalet takes inspiration from the jungle temples of Cambodia.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "temple-angkor",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Temple Angkor",
+        size: 90,
+      },
+      {
+        bar: 130,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Slightly smaller and located closer to the pool pavilion, this chalet consists of a bedroom that leads to a spacious open-sided terrace immersed in nature.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "pagoda-gold",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Pagoda Gold",
+        size: 60,
+      },
+    ],
     experiences: [],
-    description: "",
+    description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
         nextGen: "/assets/img/bg-boutique-87.avif",
@@ -101,8 +158,8 @@ const hotels: Hotel[] = [
       address: "Kaleliya, Pasyala, Sri Lanka.",
       place: "Pasyala",
       coords: {
-        lat: 22,
-        lng: 22,
+        lng: 80.102867,
+        lat: 7.190211,
       },
     },
   },
@@ -110,9 +167,66 @@ const hotels: Hotel[] = [
   {
     name: "Boutique 87",
     id: "boutique-87",
-    rooms: [],
+    rooms: [
+      {
+        bar: 150,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Situated in direct view of the adjoining Buddhist temple with its pristine white stupa, this chalet takes inspiration from the jungle temples of Cambodia.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "temple-angkor",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Temple Angkor",
+        size: 90,
+      },
+      {
+        bar: 130,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Slightly smaller and located closer to the pool pavilion, this chalet consists of a bedroom that leads to a spacious open-sided terrace immersed in nature.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "pagoda-gold",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Pagoda Gold",
+        size: 60,
+      },
+    ],
     experiences: [],
-    description: "",
+    description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
         nextGen: "/assets/img/bg-boutique-87.avif",
@@ -124,8 +238,8 @@ const hotels: Hotel[] = [
       address: "No. 87, Galle Road, Bentota, Sri Lanka",
       place: "Bentota",
       coords: {
-        lat: 22,
-        lng: 22,
+        lng: 80.001047,
+        lat: 6.41362,
       },
     },
   },
@@ -133,9 +247,66 @@ const hotels: Hotel[] = [
   {
     name: "SinghaGiri",
     id: "singhagiri",
-    rooms: [],
+    rooms: [
+      {
+        bar: 150,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Situated in direct view of the adjoining Buddhist temple with its pristine white stupa, this chalet takes inspiration from the jungle temples of Cambodia.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "temple-angkor",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Temple Angkor",
+        size: 90,
+      },
+      {
+        bar: 130,
+        beds: "King Size Double Bed",
+        currency: "USD",
+        description:
+          "Slightly smaller and located closer to the pool pavilion, this chalet consists of a bedroom that leads to a spacious open-sided terrace immersed in nature.",
+        features: [
+          "Air Conditions",
+          "Overhead Fan",
+          "Free WiFi",
+          "Room Service",
+          "Rain Shower",
+        ],
+        id: "pagoda-gold",
+        images: [
+          {
+            nextGen: "/assets/img/bg-boutique-87.avif",
+            fallback: "/assets/img/bg-boutique-87.jpg",
+            alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-fireplace.avif",
+            fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+        ],
+        name: "Pagoda Gold",
+        size: 60,
+      },
+    ],
     experiences: [],
-    description: "",
+    description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
         nextGen: "/assets/img/singhagiri-brunch.avif",
@@ -147,8 +318,8 @@ const hotels: Hotel[] = [
       address: "Nuwara Eliya, Sri Lanka.",
       place: "Nuwara Eliya",
       coords: {
-        lat: 22,
-        lng: 22,
+        lng: 80.766449,
+        lat: 6.961831,
       },
     },
   },
