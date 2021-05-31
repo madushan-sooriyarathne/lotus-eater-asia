@@ -25,10 +25,10 @@ import {
   OverlayBackground,
   backgroundVariant,
   OverlayBackgroundLayer,
-  OverlayBackgroundImage,
   LinkSeparator,
   ContactDetails,
 } from "./styles";
+import ImageComponent from "../../image";
 
 const NavBar: React.FC = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -71,13 +71,13 @@ const NavBar: React.FC = (): JSX.Element => {
             key="overlay-mask"
           >
             <OverlayBackground variants={backgroundVariant} key="overlay-bg">
-              <picture>
-                <source
-                  srcSet="/assets/img/bg-boutique-87.avif"
-                  type="image/avif"
-                />
-                <OverlayBackgroundImage src="/assets/img/bg-boutique-87.jpg"></OverlayBackgroundImage>
-              </picture>
+              <ImageComponent
+                image={{
+                  nextGen: "/assets/img/bg-boutique-87.avif",
+                  fallback: "/assets/img/bg-boutique-87.jpg",
+                  alt: "Navigation panel background",
+                }}
+              />
               <OverlayBackgroundLayer />
             </OverlayBackground>
             <OverlayLogo

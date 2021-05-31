@@ -184,17 +184,6 @@ const OverlayBackground = styled(motion.div)`
   z-index: -1;
 `;
 
-const OverlayBackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;
-
 const OverlayBackgroundLayer = styled.div`
   position: absolute;
   top: 0;
@@ -395,7 +384,6 @@ export {
   Nav,
   NavOverlayMask,
   OverlayBackground,
-  OverlayBackgroundImage,
   OverlayBackgroundLayer,
   OverlayLogo,
   NavLinkContainer,
