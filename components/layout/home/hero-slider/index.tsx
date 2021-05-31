@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { clamp } from "../../../utils";
+import { clamp } from "../../../../utils";
 
 import {
   Overlay,

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import HeadingPrimary from "../../headings/heading-primary";
-import ImageComponent from "../../image";
-import MouseScrollIndicator from "../../mouse-scroll-indicator";
+import HeadingPrimary from "../../../headings/heading-primary";
+import ImageComponent from "../../../image";
+import MouseScrollIndicator from "../../../mouse-scroll-indicator";
 import {
   Cover,
   HotelNavLink,

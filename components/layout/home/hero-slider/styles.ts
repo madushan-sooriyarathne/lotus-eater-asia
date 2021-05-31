@@ -2,10 +2,10 @@ import styled, { css, keyframes } from "styled-components";
 import { motion, Variants } from "framer-motion";
 
 const animate = keyframes`
-0%  {
+from  {
   stroke-dashoffset: 130;
 }
-100% {
+to {
   stroke-dashoffset: 0;
 }
 `;

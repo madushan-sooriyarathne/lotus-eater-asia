@@ -1,7 +1,7 @@
-import HeadingPrimary from "../../headings/heading-primary";
-import HeadingSub from "../../headings/heading-sub";
-import ImageComponent from "../../image";
-import Paragraph from "../../paragraph";
+import HeadingPrimary from "../../../headings/heading-primary";
+import HeadingSub from "../../../headings/heading-sub";
+import ImageComponent from "../../../image";
+import Paragraph from "../../../paragraph";
 import {
   Section,
   ImageWrapper,
