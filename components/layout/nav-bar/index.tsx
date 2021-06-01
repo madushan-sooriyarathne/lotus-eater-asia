@@ -80,12 +80,14 @@ const NavBar: React.FC = (): JSX.Element => {
               />
               <OverlayBackgroundLayer />
             </OverlayBackground>
-            <OverlayLogo
-              src="/assets/logos/lotus-eater-asia-logo-white.svg"
-              alt="Lotus Eater Asia - Sri Lanka's exclusive boutique hotel collection"
-              variants={overlayLogoVariant}
-              key="overlay-logo"
-            ></OverlayLogo>
+            <Link href="/">
+              <OverlayLogo
+                src="/assets/logos/lotus-eater-asia-logo-white.svg"
+                alt="Lotus Eater Asia - Sri Lanka's exclusive boutique hotel collection"
+                variants={overlayLogoVariant}
+                key="overlay-logo"
+              ></OverlayLogo>
+            </Link>
             <NavLinkContainer>
               {navLinks.map((link: NavLink, index: number) => (
                 <>

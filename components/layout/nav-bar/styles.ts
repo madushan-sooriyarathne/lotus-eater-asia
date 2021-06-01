@@ -204,6 +204,7 @@ const OverlayLogo = styled(motion.img)`
   grid-area: lo;
   height: 10rem;
   width: auto;
+  cursor: pointer;
 `;
 
 const NavLinkContainer = styled.div`

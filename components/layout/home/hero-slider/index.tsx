@@ -1,4 +1,5 @@
 import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { clamp } from "utils";
 
@@ -45,10 +46,12 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
     <SliderWrapper>
       <AnimatePresence custom={direction} initial={false}>
         <Overlay>
-          <Logo
-            src="/assets/logos/lotus-eater-asia-logo-white.svg"
-            alt="Luxury Boutique Hotels across Sri Lanka"
-          ></Logo>
+          <Link href="/">
+            <Logo
+              src="/assets/logos/lotus-eater-asia-logo-white.svg"
+              alt="Luxury Boutique Hotels across Sri Lanka"
+            ></Logo>
+          </Link>
           <OverlayContent>
             <OverlayTextHeading>
               Privacy, Luxury <br />& Impeccable Service

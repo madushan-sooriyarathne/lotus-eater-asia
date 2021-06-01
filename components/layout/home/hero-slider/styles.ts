@@ -77,6 +77,7 @@ const Logo = styled.img`
   grid-area: lo;
   width: auto;
   height: 10rem;
+  cursor: pointer;
 `;
 
 const OverlayContent = styled.div`
