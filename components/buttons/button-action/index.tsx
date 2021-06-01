@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import LoadingSpinner from "../../loading-spinnter";
+import LoadingSpinner from "@components/loading-spinnter";
 
 import { Button, ButtonText, SpinnerWrapper } from "./styles";
 

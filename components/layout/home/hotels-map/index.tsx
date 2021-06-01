@@ -1,9 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 import { MouseEvent, useCallback, useState } from "react";
-import ButtonPrimary from "../../../buttons/button-primary";
-import ButtonSecondary from "../../../buttons/button-secondary";
-import HeadingSub from "../../../headings/heading-sub";
-import HeadingTertiary from "../../../headings/heading-tertiary";
+import ButtonPrimary from "@components/buttons/button-primary";
+import ButtonSecondary from "@components/buttons/button-secondary";
+import HeadingSub from "@components/headings/heading-sub";
+import HeadingTertiary from "@components/headings/heading-tertiary";
 import {
   Section,
   ContentWrapper,

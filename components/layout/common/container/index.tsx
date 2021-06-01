@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import Head from "next/head";
 
-import Footer from "../../footer";
-import NavBar from "../../nav-bar";
+import Footer from "@layouts/footer";
+import NavBar from "@layouts/nav-bar";
 
 import { Content, Page } from "./styles";
 

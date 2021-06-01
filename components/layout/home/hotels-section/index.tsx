@@ -1,5 +1,5 @@
-import ContentSlider from "../../../content-slider";
-import HeadingPrimary from "../../../headings/heading-primary";
+import ContentSlider from "@components/content-slider";
+import HeadingPrimary from "@components/headings/heading-primary";
 import { Section } from "./styles";
 
 interface Props {

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { hotels } from "../../../../site-data";
-import { fetchTemp } from "../../../../utils";
-import HeadingSecondary from "../../../headings/heading-secondary";
-import HeadingSub from "../../../headings/heading-sub";
-import HeadingTertiary from "../../../headings/heading-tertiary";
+import { fetchTemp } from "utils";
+import HeadingSecondary from "@components/headings/heading-secondary";
+import HeadingSub from "@components/headings/heading-sub";
+
 import {
   Section,
   SummeryContainer,

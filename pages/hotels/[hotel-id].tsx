@@ -1,6 +1,7 @@
-import Container from "../../components/layout/common/container";
-import HotelCover from "../../components/layout/hotel/hotel-cover";
-import HotelOverviewSection from "../../components/layout/hotel/overview-section";
+import Container from "@layouts/common/container";
+import HotelCover from "@layouts/hotel/hotel-cover";
+import HotelOverviewSection from "@layouts/hotel/overview-section";
+import RoomsSection from "@layouts/hotel/rooms-section";
 
 import { hotels } from "../../site-data";
 
@@ -11,6 +12,7 @@ const Hotel: React.FC = (): JSX.Element => {
     <Container>
       <HotelCover coverImage={hotel.images[0]} name={hotel.name} />
       <HotelOverviewSection hotel={hotel} />
+      <RoomsSection rooms={hotel.rooms} />
     </Container>
   );
 };

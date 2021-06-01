@@ -1,11 +1,11 @@
-import AboutSection from "../components/layout/home/about-section";
-import Container from "../components/layout/common/container";
-import HeroSlider from "../components/layout/home/hero-slider";
-import HotelsMap from "../components/layout/home/hotels-map";
-import HotelsSection from "../components/layout/home/hotels-section";
-import NewsletterSection from "../components/layout/common/newsletter-section";
-import OffersSection from "../components/layout/home/offers-section";
-import { slides, hotelsSlider, hotels, offers } from "../site-data";
+import AboutSection from "@layouts/home/about-section";
+import Container from "@layouts/common/container";
+import HeroSlider from "@layouts/home/hero-slider";
+import HotelsMap from "@layouts/home/hotels-map";
+import HotelsSection from "@layouts/home/hotels-section";
+import NewsletterSection from "@layouts/common/newsletter-section";
+import OffersSection from "@layouts/home/offers-section";
+import { slides, hotelsSlider, hotels, offers } from "./../site-data";
 
 const Home: React.FC = (): JSX.Element => {
   return (

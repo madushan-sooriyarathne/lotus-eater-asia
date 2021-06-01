@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import ButtonPrimary from "../buttons/button-primary";
-import HeadingSecondary from "../headings/heading-secondary";
-import HeadingSub from "../headings/heading-sub";
-import Paragraph from "../paragraph";
+import ButtonPrimary from "@components/buttons/button-primary";
+import HeadingSecondary from "@components/headings/heading-secondary";
+import HeadingSub from "@components/headings/heading-sub";
+import Paragraph from "@components/paragraph";
 import {
   Container,
   SliderControlButton,

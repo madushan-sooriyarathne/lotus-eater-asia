@@ -1,7 +1,7 @@
-import ButtonSecondary from "../buttons/button-secondary";
-import HeadingTertiary from "../headings/heading-tertiary";
-import ImageComponent from "../image";
-import Paragraph from "../paragraph";
+import ButtonSecondary from "@components/buttons/button-secondary";
+import HeadingTertiary from "@components/headings/heading-tertiary";
+import ImageComponent from "@components/image";
+import Paragraph from "@components/paragraph";
 import {
   Card,
   ContentWrapper,
