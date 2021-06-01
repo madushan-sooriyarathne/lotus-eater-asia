@@ -374,6 +374,7 @@ const offers: Offer[] = [
 ];
 
 const navLinks: NavLink[] = [
+  { name: "Home", route: "/" },
   { name: "Hotels", route: "/hotels" },
   { name: "Offers", route: "/offers" },
   { name: "Contact", route: "/contact" },
