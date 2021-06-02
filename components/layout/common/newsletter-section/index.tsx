@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { useInput } from "hooks";
+import { useInput } from "@hooks";
 import ActionButton from "@components/buttons/button-action";
 import HeadingSecondary from "@components/headings/heading-secondary";
 import HeadingTertiary from "@components/headings/heading-tertiary";

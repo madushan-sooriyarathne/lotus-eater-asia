@@ -17,7 +17,7 @@ import {
   sliderVariants,
   SliderContentVariants,
 } from "./styles";
-import { clamp } from "../../utils";
+import { clamp } from "@utils";
 
 interface Props {
   items: SliderContent[];

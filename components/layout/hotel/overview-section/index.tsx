@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchTemp } from "utils";
+import { fetchTemp } from "@utils";
 import HeadingSecondary from "@components/headings/heading-secondary";
 import HeadingSub from "@components/headings/heading-sub";
 

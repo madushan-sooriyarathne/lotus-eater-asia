@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { clamp } from "utils";
+import { clamp } from "@utils";
 
 import {
   Overlay,

@@ -11,7 +11,7 @@ import {
   Credit,
 } from "./styles";
 
-import { navLinks, socialLinks } from "site-data";
+import { navLinks, socialLinks } from "@site-data";
 
 const Footer: React.FC = (): JSX.Element => {
   return (

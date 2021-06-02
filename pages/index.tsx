@@ -5,7 +5,7 @@ import HotelsMap from "@layouts/home/hotels-map";
 import HotelsSection from "@layouts/home/hotels-section";
 import NewsletterSection from "@layouts/common/newsletter-section";
 import OffersSection from "@layouts/home/offers-section";
-import { slides, hotelsSlider, hotels, offers } from "./../site-data";
+import { slides, hotelsSlider, hotels, offers } from "@site-data";
 
 const Home: React.FC = (): JSX.Element => {
   return (
