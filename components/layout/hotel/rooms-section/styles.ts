@@ -8,17 +8,17 @@ const Section = styled.section`
   grid-template-rows: repeat(2, min-content);
   row-gap: 5rem;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 `;
 
 const RoomContainer = styled.div`
-  width: 100%;
+  width: 95%;
   height: auto;
 
   display: flex;
-  row-gap: 3rem;
+  row-gap: 5rem;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export { Section, RoomContainer };
