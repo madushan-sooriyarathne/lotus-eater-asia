@@ -112,6 +112,14 @@ const hotels: Hotel[] = [
             nextGen: "/assets/img/singhagiri-fireplace.avif",
             fallback: "/assets/img/singhagiri-fireplace.jpg",
           },
+          {
+            nextGen: "/assets/img/singhagiri-brunch.avif",
+            fallback: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-room.avif",
+            fallback: "/assets/img/singhagiri-room.jpg",
+          },
         ],
         name: "Temple Angkor",
         size: 90,
@@ -139,6 +147,14 @@ const hotels: Hotel[] = [
           {
             nextGen: "/assets/img/singhagiri-fireplace.avif",
             fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-brunch.avif",
+            fallback: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-room.avif",
+            fallback: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Pagoda Gold",
@@ -220,6 +236,14 @@ const hotels: Hotel[] = [
             nextGen: "/assets/img/singhagiri-fireplace.avif",
             fallback: "/assets/img/singhagiri-fireplace.jpg",
           },
+          {
+            nextGen: "/assets/img/singhagiri-brunch.avif",
+            fallback: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-room.avif",
+            fallback: "/assets/img/singhagiri-room.jpg",
+          },
         ],
         name: "Pagoda Gold",
         size: 60,
@@ -272,6 +296,14 @@ const hotels: Hotel[] = [
             nextGen: "/assets/img/singhagiri-fireplace.avif",
             fallback: "/assets/img/singhagiri-fireplace.jpg",
           },
+          {
+            nextGen: "/assets/img/singhagiri-brunch.avif",
+            fallback: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-room.avif",
+            fallback: "/assets/img/singhagiri-room.jpg",
+          },
         ],
         name: "Temple Angkor",
         size: 90,
@@ -299,6 +331,14 @@ const hotels: Hotel[] = [
           {
             nextGen: "/assets/img/singhagiri-fireplace.avif",
             fallback: "/assets/img/singhagiri-fireplace.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-brunch.avif",
+            fallback: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            nextGen: "/assets/img/singhagiri-room.avif",
+            fallback: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Pagoda Gold",
