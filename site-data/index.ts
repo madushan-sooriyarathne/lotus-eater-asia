@@ -372,7 +372,7 @@ const offers: Offer[] = [
     id: "3-for-2",
     image: {
       nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.avif",
+      fallback: "/assets/img/bg-boutique-87.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [],
@@ -388,7 +388,7 @@ const offers: Offer[] = [
     id: "honeymoon-offer",
     image: {
       nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.avif",
+      fallback: "/assets/img/singhagiri-brunch.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [],
@@ -403,7 +403,7 @@ const offers: Offer[] = [
     id: "early-bird",
     image: {
       nextGen: "/assets/img/singhagiri-room.avif",
-      fallback: "/assets/img/singhagiri-room.avif",
+      fallback: "/assets/img/singhagiri-room.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [],

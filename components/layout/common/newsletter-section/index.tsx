@@ -71,7 +71,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
       <ImageComponent
         image={{
           nextGen: "/assets/img/singhagiri-fireplace.avif",
-          fallback: "/assets/img/singhagiri-fireplace.avif",
+          fallback: "/assets/img/singhagiri-fireplace.jpg",
           alt: "Singhagiri Boutiuque Hotel Nuwara Eliya",
         }}
       />
