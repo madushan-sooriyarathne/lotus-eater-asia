@@ -9,7 +9,6 @@ import {
   OverlayContent,
   OverlayTextHeading,
   Slide,
-  SlideImage,
   SliderAnchorBorder,
   SliderAnchorBorderWrapper,
   SliderAnchorIcon,
@@ -19,32 +18,33 @@ import {
   SliderWrapper,
   SubText,
 } from "./styles";
+import ImageComponent from "@components/image";
 
 interface Props {
   slides: Image[];
 }
 
 const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
-  const [[page, direction], setSelected] = useState<[number, number]>([0, 1]);
+  const [page, setSelected] = useState<number>(0);
 
   let timeout: NodeJS.Timeout;
   useEffect(() => {
-    timeout = setTimeout(() => paginate(1), 6000);
+    timeout = setTimeout(() => paginate(), 6000);
   });
 
-  const paginate = (newDirection: number = 1) => {
-    setSelected([page + newDirection, newDirection]);
+  const paginate = () => {
+    setSelected(page + 1);
   };
 
   const handleClick = (slideNo: number) => {
-    setSelected([slideNo, 1]);
+    setSelected(slideNo);
   };
 
   const sliderIndex = clamp(page, 0, slides.length);
 
   return (
     <SliderWrapper>
-      <AnimatePresence custom={direction} initial={false}>
+      <AnimatePresence initial={false}>
         <Overlay>
           <Link href="/">
             <Logo
@@ -88,7 +88,6 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
         </Overlay>
         <Slide
           key={sliderIndex}
-          custom={direction}
           variants={sliderAnimation}
           initial="enter"
           animate="center"
@@ -98,13 +97,7 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
             opacity: { duration: 0.2 },
           }}
         >
-          <SlideImage>
-            <source type="image/avif" srcSet={slides[sliderIndex].nextGen} />
-            <img
-              src={slides[sliderIndex].fallback}
-              alt={slides[sliderIndex].alt}
-            />
-          </SlideImage>
+          <ImageComponent image={slides[sliderIndex]} />
         </Slide>
       </AnimatePresence>
     </SliderWrapper>

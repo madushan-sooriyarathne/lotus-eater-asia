@@ -34,20 +34,6 @@ const Slide = styled(motion.div)`
   z-index: -1;
 `;
 
-const SlideImage = styled.picture`
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  & img {
-    min-width: 100%;
-    min-height: 100%;
-  }
-`;
-
 const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -186,30 +172,25 @@ const SliderAnchorBorder = styled(motion.circle)<SliderAnchorIconProps>`
 `;
 
 const sliderAnimation: Variants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? "100%" : "-100%",
-      opacity: 0,
-    };
+  enter: {
+    x: "100%",
+    opacity: 0,
   },
   center: {
     zIndex: 1,
     x: 0,
     opacity: 1,
   },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? "100%" : "-100%",
-      opacity: 0,
-    };
+  exit: {
+    zIndex: 0,
+    x: "-100%",
+    opacity: 0,
   },
 };
 
 export {
   SliderWrapper,
   Slide,
-  SlideImage,
   sliderAnimation,
   Overlay,
   Logo,
