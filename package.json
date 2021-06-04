@@ -21,6 +21,7 @@
   "homepage": "https://github.com/madushan-sooriyarathne/louts-eater-asia#readme",
   "dependencies": {
     "framer-motion": "^4.1.17",
+    "mapbox-gl": "^2.3.0",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -28,6 +29,7 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
+    "@types/mapbox-gl": "^2.1.2",
     "@types/node": "^15.3.0",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.5",
