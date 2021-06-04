@@ -2,11 +2,9 @@ import { useEffect } from "react";
 import { Section, MapBox, LocationDetails } from "./styles";
 import mapboxgl, { Map } from "mapbox-gl";
 import TextGroup from "@components/text-group";
-import HeadingPrimary from "@components/headings/heading-primary";
 import HeadingSecondary from "@components/headings/heading-secondary";
 import Paragraph from "@components/paragraph";
 import HeadingTertiary from "@components/headings/heading-tertiary";
-import ButtonPrimary from "@components/buttons/button-primary";
 import ButtonLink from "@components/buttons/button-link";
 
 interface Props {
