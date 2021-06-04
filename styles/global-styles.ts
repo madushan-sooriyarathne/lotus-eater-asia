@@ -2,7 +2,17 @@ import {
   createGlobalStyle,
   DefaultTheme,
   GlobalStyleComponent,
+  keyframes,
 } from "styled-components";
+
+const pulse = keyframes`
+    from {
+       opacity: 1
+    }
+    to {
+        opacity: 0.5;
+    }
+`;
 
 const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 
@@ -50,6 +60,16 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
         font-size: 1.5rem;
         text-align: center;
         /* color */
+    }
+
+    .marker-element {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        background-color: ${(props) => props.theme.colors.blackLight};
+        border: ${(props) => `3px solid ${props.theme.colors.primaryLight}`};
+        animation: ${pulse} 1s ease-in-out infinite alternate;
+       
     }
 
     // TODO: Add Scroll Bar styles
