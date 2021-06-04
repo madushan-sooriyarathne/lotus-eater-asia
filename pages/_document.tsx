@@ -47,6 +47,10 @@ class AppDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@300;400;600;700;800&display=swap"
             rel="stylesheet"
           ></link>
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
