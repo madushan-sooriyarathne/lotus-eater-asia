@@ -19,7 +19,7 @@ const MapSection: React.FC<Props> = ({ hotel }: Props): JSX.Element => {
     mapboxgl.accessToken = process.env.MAP_BOX_API_KEY as string;
     const map: Map = new mapboxgl.Map({
       container: "map-container",
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/mapbox/light-v10",
       center: [hotel.location.coords.lng, hotel.location.coords.lat],
       zoom: 10,
       minZoom: 8,
