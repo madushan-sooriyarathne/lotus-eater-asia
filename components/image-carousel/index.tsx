@@ -24,8 +24,6 @@ const ImageCarousel: React.FC<Props> = ({ images }: Props): JSX.Element => {
 
   const curPage: number = clamp(slide, 0, images.length);
 
-  console.log(slide, direction);
-
   return (
     <Carousel>
       <AnimatePresence custom={direction} initial={false}>
