@@ -11,14 +11,10 @@ import {
 } from "./styles";
 
 interface Props {
-  name: string;
-  coverImage: Image;
+  hotel: Hotel;
 }
 
-const HotelCover: React.FC<Props> = ({
-  name,
-  coverImage,
-}: Props): JSX.Element => {
+const HotelCover: React.FC<Props> = ({ hotel }: Props): JSX.Element => {
   const [showScrollIndicator, setShowScrollIndicator] = useState<boolean>(true);
 
   useEffect(() => {
@@ -40,14 +36,16 @@ const HotelCover: React.FC<Props> = ({
   return (
     <Cover>
       <ImageContainer>
-        <ImageComponent image={coverImage} />
+        <ImageComponent image={hotel.images[0]} />
       </ImageContainer>
-      <HeadingPrimary light>{name}</HeadingPrimary>
+      <HeadingPrimary light>{hotel.name}</HeadingPrimary>
       <HotelNavSet>
         <HotelNavLink href="#overview">Overview</HotelNavLink>
         <HotelNavLink href="#rooms">Rooms</HotelNavLink>
         <HotelNavLink href="#location">Location</HotelNavLink>
-        <HotelNavLink href="#offers">Offers</HotelNavLink>
+        {hotel.offers && hotel.offers.length < 1 && (
+          <HotelNavLink href="#offers">Offers</HotelNavLink>
+        )}
       </HotelNavSet>
       <MouseWrapper>
         <MouseScrollIndicator small={false} show={showScrollIndicator} />
