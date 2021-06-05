@@ -1,4 +1,4 @@
-import HotelGroup from "@components/layout/hotel-page/hotel-group";
+import ItemGrid from "@components/layout/common/item-grid";
 import Container from "@layouts/common/container";
 import {
   GetStaticProps,
@@ -8,6 +8,7 @@ import {
 import { hotels } from "@site-data";
 import ImageCover from "@components/layout/common/image-cover";
 import NewsletterSection from "@components/layout/common/newsletter-section";
+import HotelCard from "@components/hotel-card";
 
 interface Props {
   hotels: Hotel[];
@@ -17,7 +18,11 @@ const HotelsPage: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
   return (
     <Container>
       <ImageCover image={hotels[0].images[0]} heading="Our Properties" />
-      <HotelGroup hotels={hotels} />
+      <ItemGrid>
+        {hotels.map((hotel) => (
+          <HotelCard hotel={hotel} key={hotel.id} />
+        ))}
+      </ItemGrid>
       <NewsletterSection />
     </Container>
   );
