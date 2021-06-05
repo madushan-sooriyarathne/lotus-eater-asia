@@ -18,6 +18,8 @@ const Nav = styled.nav<NavProps>`
   width: auto;
   height: auto;
   z-index: 20;
+
+  transition: box-shadow 0.3s ease-in-out;
 `;
 
 const background = css`

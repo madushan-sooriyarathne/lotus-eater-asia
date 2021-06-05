@@ -118,7 +118,7 @@ const NavBar: React.FC = (): JSX.Element => {
         )}
       </AnimatePresence>
       {/* Always visible floating nav bar with hamburger menu button */}
-      <Nav open={menuOpen}>
+      <Nav open={menuOpen || !scrolled}>
         <NavLinkWrapper open={!scrolled || menuOpen}>
           <Link href="/contact">
             <NavLink>Contact</NavLink>
