@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HotelCardGroup = styled.section`
+const GridSection = styled.section`
   grid-column: content-start / content-end;
   width: 100%;
   height: 100%;
@@ -13,4 +13,4 @@ const HotelCardGroup = styled.section`
   gap: 5rem;
 `;
 
-export { HotelCardGroup };
+export { GridSection };
