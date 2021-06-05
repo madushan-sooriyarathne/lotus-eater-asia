@@ -1,6 +1,5 @@
-import HeadingPrimary from "@components/headings/heading-primary";
 import HotelCard from "@components/hotel-card";
-import { Section, HotelCardGroup } from "./styles";
+import { HotelCardGroup } from "./styles";
 
 interface Props {
   hotels: Hotel[];
@@ -8,14 +7,11 @@ interface Props {
 
 const HotelGroup: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
   return (
-    <Section>
-      <HeadingPrimary>Our Properties</HeadingPrimary>
-      <HotelCardGroup>
-        {hotels.map((hotel) => (
-          <HotelCard hotel={hotel} key={hotel.id} />
-        ))}
-      </HotelCardGroup>
-    </Section>
+    <HotelCardGroup>
+      {hotels.map((hotel) => (
+        <HotelCard hotel={hotel} key={hotel.id} />
+      ))}
+    </HotelCardGroup>
   );
 };
 

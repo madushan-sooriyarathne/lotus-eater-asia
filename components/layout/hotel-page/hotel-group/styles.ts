@@ -1,22 +1,7 @@
 import styled from "styled-components";
 
-const Section = styled.section`
+const HotelCardGroup = styled.section`
   grid-column: content-start / content-end;
-
-  display: grid;
-  grid-template-columns: minmax(min-content, 1fr);
-  grid-template-rows: repeat(2, max-content);
-  grid-template-areas:
-    "ti"
-    "gr";
-  row-gap: 5rem;
-  align-items: start;
-  justify-items: center;
-  margin-top: 10rem;
-`;
-
-const HotelCardGroup = styled.div`
-  grid-area: gr;
   width: 100%;
   height: 100%;
 
@@ -25,7 +10,7 @@ const HotelCardGroup = styled.div`
   grid-auto-rows: max-content;
   align-items: start;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
 `;
 
-export { Section, HotelCardGroup };
+export { HotelCardGroup };
