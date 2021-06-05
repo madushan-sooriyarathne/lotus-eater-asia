@@ -6,6 +6,8 @@ import {
   GetStaticPropsResult,
 } from "next";
 import { hotels } from "@site-data";
+import ImageCover from "@components/layout/common/image-cover";
+import NewsletterSection from "@components/layout/common/newsletter-section";
 
 interface Props {
   hotels: Hotel[];
@@ -14,7 +16,9 @@ interface Props {
 const HotelsPage: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
   return (
     <Container>
+      <ImageCover image={hotels[0].images[0]} heading="Our Properties" />
       <HotelGroup hotels={hotels} />
+      <NewsletterSection />
     </Container>
   );
 };
