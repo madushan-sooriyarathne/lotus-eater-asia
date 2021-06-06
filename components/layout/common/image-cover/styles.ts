@@ -40,13 +40,4 @@ const CoverBg = styled.div`
   }
 `;
 
-const Heading = styled.h1`
-  font-size: 10rem;
-  font-weight: 800;
-  font-family: ${(props) => props.theme.fonts.primary};
-  letter-spacing: 1px;
-  line-height: 150%;
-  color: ${(props) => props.theme.colors.primaryMedium};
-`;
-
-export { CoverSection, CoverBg, Heading };
+export { CoverSection, CoverBg };

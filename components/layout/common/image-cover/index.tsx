@@ -1,6 +1,7 @@
+import HeadingLarge from "@components/headings/heading-large";
 import ImageComponent from "@components/image";
 import TextGroup from "@components/text-group";
-import { CoverBg, CoverSection, Heading } from "./styles";
+import { CoverBg, CoverSection } from "./styles";
 
 interface Props {
   image: Image;
@@ -17,7 +18,7 @@ const ImageCover: React.FC<Props> = ({
         <ImageComponent image={image} />
       </CoverBg>
       <TextGroup>
-        <Heading>{heading}</Heading>
+        <HeadingLarge>{heading}</HeadingLarge>
       </TextGroup>
     </CoverSection>
   );
