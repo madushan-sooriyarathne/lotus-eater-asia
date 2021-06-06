@@ -5,15 +5,17 @@ import { ButtonWrapper, ButtonIcon, ButtonText } from "./styles";
 interface Props {
   children: ReactNode;
   route: string;
+  light?: boolean;
 }
 
 const ButtonPrimary: React.FC<Props> = ({
   children,
   route,
+  light = false,
 }: Props): JSX.Element => {
   return (
     <Link href={route}>
-      <ButtonWrapper>
+      <ButtonWrapper light={light}>
         <ButtonIcon
           width="39"
           height="16"
