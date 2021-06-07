@@ -12,7 +12,7 @@ const RoomsSection: React.FC<Props> = ({ rooms }: Props): JSX.Element => {
       <HeadingPrimary>Rooms</HeadingPrimary>
       <RoomContainer>
         {rooms.map((room) => (
-          <RoomCard room={room} />
+          <RoomCard room={room} key={room.id} />
         ))}
       </RoomContainer>
     </Section>
