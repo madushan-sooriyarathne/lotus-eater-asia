@@ -30,6 +30,8 @@ const HeroSlider: React.FC<Props> = ({ slides }: Props): JSX.Element => {
   let timeout: NodeJS.Timeout;
   useEffect(() => {
     timeout = setTimeout(() => paginate(), 6000);
+
+    return () => clearTimeout(timeout);
   });
 
   const paginate = () => {

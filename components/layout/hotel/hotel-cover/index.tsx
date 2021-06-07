@@ -19,18 +19,18 @@ const HotelCover: React.FC<Props> = ({ hotel }: Props): JSX.Element => {
 
   useEffect(() => {
     // set event listener on window object to listen to mouse scroll event
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY > 200) {
         setShowScrollIndicator(false);
       } else {
         setShowScrollIndicator(true);
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     // remove the event listen when component un-mount
-    return (() => {
-      window.removeEventListener("scroll", () => {});
-    })();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

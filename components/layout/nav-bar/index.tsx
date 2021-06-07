@@ -39,18 +39,18 @@ const NavBar: React.FC = (): JSX.Element => {
 
   useEffect(() => {
     // set an event listener on window
-    window.addEventListener("scroll", () => {
+
+    const scrollHandler = () => {
       if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
-    });
+    };
 
-    const unSetEventListener = () =>
-      window.removeEventListener("scroll", () => {});
+    window.addEventListener("scroll", scrollHandler);
 
-    return unSetEventListener();
+    return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
   // Event Handlers

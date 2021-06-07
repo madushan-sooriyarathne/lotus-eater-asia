@@ -35,7 +35,7 @@ const MapSection: React.FC<Props> = ({ hotel }: Props): JSX.Element => {
         lng: hotel.location.coords.lng,
       })
       .addTo(map);
-  });
+  }, []);
 
   return (
     <Section id="location">
