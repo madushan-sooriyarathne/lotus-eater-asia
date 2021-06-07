@@ -16,7 +16,7 @@ interface Props {
 
 const HotelsPage: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
   return (
-    <Container>
+    <Container title="Our Hotels">
       <ImageCover image={hotels[0].images[0]} heading="Our Properties" />
       <ItemGrid>
         {hotels.map((hotel) => (
