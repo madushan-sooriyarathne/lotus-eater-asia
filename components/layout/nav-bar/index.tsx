@@ -29,18 +29,13 @@ import {
   ContactDetails,
 } from "./styles";
 import ImageComponent from "../../image";
+import { useRouter } from "next/dist/client/router";
 
 const NavBar: React.FC = (): JSX.Element => {
+  const router = useRouter();
+
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
-
-  // menu open handler function
-  const handleMenuOpen = () => {
-    setMenuOpen((prevState: boolean) => !prevState);
-    if (menuOpen) {
-      document.body.style.overflow == "hidden";
-    }
-  };
 
   useEffect(() => {
     // set an event listener on window
@@ -57,6 +52,25 @@ const NavBar: React.FC = (): JSX.Element => {
 
     return unSetEventListener();
   }, []);
+
+  // Event Handlers
+
+  // menu open handler function
+  const handleMenuOpen = () => {
+    setMenuOpen((prevState: boolean) => !prevState);
+    if (menuOpen) {
+      document.body.style.overflow == "hidden";
+    }
+  };
+
+  // menu navIcon click event handler
+  // when clicked on a icon, first we close the menu
+  // and the push the next route to next router
+  const handleNavLinkClick = (route: string): void => {
+    // change the route after 1.5 seconds
+    setTimeout(() => router.push(route), 1500);
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -80,25 +94,26 @@ const NavBar: React.FC = (): JSX.Element => {
               />
               <OverlayBackgroundLayer />
             </OverlayBackground>
-            <Link href="/">
-              <OverlayLogo
-                src="/assets/logos/lotus-eater-asia-logo-white.svg"
-                alt="Lotus Eater Asia - Sri Lanka's exclusive boutique hotel collection"
-                variants={overlayLogoVariant}
-                key="overlay-logo"
-              ></OverlayLogo>
-            </Link>
+
+            <OverlayLogo
+              src="/assets/logos/lotus-eater-asia-logo-white.svg"
+              alt="Lotus Eater Asia - Sri Lanka's exclusive boutique hotel collection"
+              variants={overlayLogoVariant}
+              key="overlay-logo"
+              onClick={() => handleNavLinkClick("/")}
+            ></OverlayLogo>
+
             <NavLinkContainer>
               {navLinks.map((link: NavLink, index: number) => (
                 <>
-                  <Link href={link.route}>
-                    <NavLinkMain
-                      variants={OverlayNavLinksVariant}
-                      key={`overlay-nav-link-${index}`}
-                    >
-                      {link.name}
-                    </NavLinkMain>
-                  </Link>
+                  <NavLinkMain
+                    onClick={() => handleNavLinkClick(link.route)}
+                    variants={OverlayNavLinksVariant}
+                    key={`overlay-nav-link-${index}`}
+                  >
+                    {link.name}
+                  </NavLinkMain>
+
                   {index < navLinks.length - 1 && (
                     <LinkSeparator
                       variants={NavLinkSeparatorVariant}
