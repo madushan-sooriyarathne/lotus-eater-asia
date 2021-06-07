@@ -14,6 +14,15 @@ const Heading = styled.h1<HeadingProps>`
   color: ${(props) =>
     props.light ? props.theme.colors.primaryLight : props.theme.colors.primary};
   text-align: ${(props) => props.alignment};
+
+  background: ${(props) =>
+    props.light
+      ? props.theme.gradients.textLight
+      : props.theme.gradients.textDark};
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export { Heading };
