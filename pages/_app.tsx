@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 
 import GlobalStyles from "@styles/global-styles";
 import theme from "@styles/theme";
+import { AnimatePresence } from "framer-motion";
 
 const App: React.FC<AppProps> = ({
   Component,
@@ -19,7 +20,9 @@ const App: React.FC<AppProps> = ({
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Component {...pageProps} />
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
