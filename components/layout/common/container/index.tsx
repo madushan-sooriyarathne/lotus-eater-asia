@@ -13,12 +13,17 @@ interface Props {
 
 const Container: React.FC<Props> = ({
   children,
-  title,
+  title = "Luxury Boutique Hotels in Sri Lanka",
 }: Props): JSX.Element => {
   return (
-    <Page>
+    <Page
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      exit={{ x: "100%", opacity: 1, transition: { duration: 0.5 } }}
+      key={title.replace(" ", "_").toLowerCase()}
+    >
       <Head>
-        <title>{title}</title>
+        <title>{`${title} | Lotus Eater Asia Hotels`}</title>
       </Head>
       <NavBar />
       <Content>{children}</Content>

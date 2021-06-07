@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Content = styled.main`
@@ -16,7 +17,7 @@ const Content = styled.main`
   row-gap: 15rem;
 `;
 
-const Page = styled.div`
+const Page = styled(motion.div)`
   width: 100%;
   min-height: 100vh;
 
