@@ -20,7 +20,7 @@ const ComingSoon: React.FC = (): JSX.Element => {
       ></Logo>
       <DetailsWrapper>
         <HeadingPrimary>Coming Soon</HeadingPrimary>
-        <Counter toDate={new Date("Jul 14, 2021 12:00:00")} />
+        <Counter toDate={new Date("Jul 15, 2021 12:00:00")} />
         <ContactGroup>
           <ContactMessage>For Reservations</ContactMessage>
           <ContactNumber>+94 77 777 2616</ContactNumber>
