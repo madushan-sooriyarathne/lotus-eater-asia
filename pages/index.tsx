@@ -9,7 +9,7 @@ import { slides, hotelsSlider, hotels, offers } from "@site-data";
 
 const Home: React.FC = (): JSX.Element => {
   return (
-    <Container>
+    <Container title="Home">
       <HeroSlider slides={slides} />
       <AboutSection />
       <HotelsSection hotels={hotelsSlider} />
