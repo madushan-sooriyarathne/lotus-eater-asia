@@ -90,7 +90,7 @@ const OverlayTextHeading = styled(motion.h1)`
   text-align: center;
   text-transform: uppercase;
 
-  background: ${(props) => props.theme.gradients.headingClip};
+  background: ${(props) => props.theme.gradients.textLight};
 
   -webkit-background-clip: text;
   background-clip: text;
