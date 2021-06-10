@@ -375,12 +375,26 @@ const offers: Offer[] = [
       fallback: "/assets/img/bg-boutique-87.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
-    includes: [],
-    terms: [],
+    includes: [
+      "The voucher is valid till 31st of August 2021.",
+      "Booking confirmations to be given subject to availability.",
+      "Full Payment to be confirmed upon purchasing the Voucher.",
+      "Activation of Each voucher to be done with the Reservations Department at Louts Eater Aisa.",
+      "Once purchased can’t be converted back or refund to currency.",
+      "Cancellation within before 30 days, 100% voucher Value will remain / 15 days 50% of the Voucher Value / 07 Days 100% of the Voucher Value.",
+    ],
+    terms: [
+      "Two Nights stay at Master Suite on Full Board Basis.",
+      "Daily Fruit Basket and Flower Arrangements / Customized Honeymoon Cake.",
+      "Personalized Butler Service.",
+      "Candlelit Dinner on Pool Deck overlooking the Hills (*Subject to Climate Conditions)",
+      "A bottle of House wine at Departure Dinner.",
+      "A token for your memorable time spent at Boutique 87.",
+    ],
     price: 180,
     discount: 10,
     currency: "USD",
-    validTill: "31-12-2021",
+    validTill: "2022-03-31T15:11:03.689Z",
   },
   {
     title: "Honeymoon Offer",
@@ -391,10 +405,24 @@ const offers: Offer[] = [
       fallback: "/assets/img/singhagiri-brunch.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
-    includes: [],
-    terms: [],
+    includes: [
+      "The voucher is valid till 31st of August 2021.",
+      "Booking confirmations to be given subject to availability.",
+      "Full Payment to be confirmed upon purchasing the Voucher.",
+      "Activation of Each voucher to be done with the Reservations Department at Louts Eater Aisa.",
+      "Once purchased can’t be converted back or refund to currency.",
+      "Cancellation within before 30 days, 100% voucher Value will remain / 15 days 50% of the Voucher Value / 07 Days 100% of the Voucher Value.",
+    ],
+    terms: [
+      "Two Nights stay at Master Suite on Full Board Basis.",
+      "Daily Fruit Basket and Flower Arrangements / Customized Honeymoon Cake.",
+      "Personalized Butler Service.",
+      "Candlelit Dinner on Pool Deck overlooking the Hills (*Subject to Climate Conditions)",
+      "A bottle of House wine at Departure Dinner.",
+      "A token for your memorable time spent at Boutique 87.",
+    ],
 
-    validTill: "31-12-2021",
+    validTill: "2022-03-31T15:11:03.689Z",
   },
   {
     title: "Early Bird Offer",
@@ -406,10 +434,24 @@ const offers: Offer[] = [
       fallback: "/assets/img/singhagiri-room.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
-    includes: [],
-    terms: [],
+    includes: [
+      "The voucher is valid till 31st of August 2021.",
+      "Booking confirmations to be given subject to availability.",
+      "Full Payment to be confirmed upon purchasing the Voucher.",
+      "Activation of Each voucher to be done with the Reservations Department at Louts Eater Aisa.",
+      "Once purchased can’t be converted back or refund to currency.",
+      "Cancellation within before 30 days, 100% voucher Value will remain / 15 days 50% of the Voucher Value / 07 Days 100% of the Voucher Value.",
+    ],
+    terms: [
+      "Two Nights stay at Master Suite on Full Board Basis.",
+      "Daily Fruit Basket and Flower Arrangements / Customized Honeymoon Cake.",
+      "Personalized Butler Service.",
+      "Candlelit Dinner on Pool Deck overlooking the Hills (*Subject to Climate Conditions)",
+      "A bottle of House wine at Departure Dinner.",
+      "A token for your memorable time spent at Boutique 87.",
+    ],
     discount: 20,
-    validTill: "31-12-2021",
+    validTill: "2022-03-31T15:11:03.689Z",
   },
 ];
 
@@ -426,4 +468,19 @@ const socialLinks: SocialIcon[] = [
   { name: "LinkedIn", link: "https://linkedin.com/madushan-sooriyarathne" },
 ];
 
-export { slides, hotelsSlider, hotels, offers, navLinks, socialLinks };
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export { slides, hotelsSlider, hotels, offers, navLinks, socialLinks, months };
