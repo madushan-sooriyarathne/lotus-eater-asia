@@ -1,3 +1,4 @@
+import GallerySection from "@components/layout/common/gallery-section";
 import OffersSection from "@components/layout/common/offers-section";
 import MapSection from "@components/layout/hotel/map-section";
 import Container from "@layouts/common/container";
@@ -25,6 +26,15 @@ const Hotel: React.FC<Props> = ({ hotel }: Props): JSX.Element => {
       <HotelCover hotel={hotel} />
       <HotelOverviewSection hotel={hotel} />
       <RoomsSection rooms={hotel.rooms} />
+      <GallerySection
+        images={[
+          ...hotel.images,
+          ...hotel.images,
+          ...hotel.images,
+          ...hotel.images,
+          ...hotel.images,
+        ]}
+      />
       <MapSection hotel={hotel} />
       {hotel.offers && hotel.offers.length < 1 && (
         <OffersSection offers={offers} />

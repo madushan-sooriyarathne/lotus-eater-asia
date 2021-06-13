@@ -6,6 +6,7 @@ import HotelsSection from "@layouts/home/hotels-section";
 import NewsletterSection from "@layouts/common/newsletter-section";
 import OffersSection from "@components/layout/common/offers-section";
 import { slides, hotelsSlider, hotels, offers } from "@site-data";
+import GallerySection from "@components/layout/common/gallery-section";
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -15,6 +16,7 @@ const Home: React.FC = (): JSX.Element => {
       <HotelsSection hotels={hotelsSlider} />
       <HotelsMap hotels={hotels} />
       <OffersSection offers={offers} />
+      <GallerySection images={[...slides, ...slides, ...slides, ...slides]} />
       <NewsletterSection />
     </Container>
   );
