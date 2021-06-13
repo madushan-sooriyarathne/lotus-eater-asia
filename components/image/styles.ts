@@ -9,7 +9,6 @@ const ImgBox = styled.img<ImgBoxProps>`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin: auto;
   object-position: ${(props) => `${props.x} ${props.y}`};
 `;
 
