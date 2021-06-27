@@ -16,7 +16,7 @@ const GallerySection: React.FC<Props> = ({ images }: Props): JSX.Element => {
           .slice(0, images.length > 4 ? 4 : images.length)
           .map((image: Image, index: number) => (
             <div key={index}>
-              <ImageComponent image={image} />{" "}
+              <ImageComponent image={image} />
             </div>
           ))}
       </ImageGrid>
