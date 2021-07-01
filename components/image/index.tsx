@@ -17,11 +17,6 @@ const ImageComponent: React.FC<Props> = ({
   height = "100%",
 }: Props): JSX.Element => {
   return (
-    // <picture>
-    //   <source srcSet={image.nextGen} type="image/avif" />
-    //   <ImgBox x={x} y={y} src={image.fallback} alt={image.alt} loading="lazy" />
-    // </picture>
-
     <ImgBox width={width} height={height}>
       <Image
         src={image.fallback}
