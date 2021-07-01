@@ -14,8 +14,7 @@ const Section = styled.section`
 const ImageGrid = styled.div`
   width: 100%;
   max-height: 60vh;
-  min-width: 0;
-  min-height: 0;
+  min-height: 60vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
