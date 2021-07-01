@@ -14,6 +14,7 @@ const Section = styled.section`
 
 const ContentGroup = styled.div`
   width: 85%;
+  height: 40rem;
 
   align-self: center;
   display: flex;
