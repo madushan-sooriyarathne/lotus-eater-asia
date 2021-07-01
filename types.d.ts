@@ -5,8 +5,8 @@ declare global {
   type FlexAlignment = "flex-start" | "center" | "flex-end";
 
   interface Image {
-    nextGen: string;
-    fallback: string;
+    src: string;
+    blurUrl?: string;
     alt?: string;
   }
 
