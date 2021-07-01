@@ -11,6 +11,10 @@ const GridSection = styled.section`
   align-items: start;
   justify-content: center;
   gap: 5rem;
+
+  & > * {
+    min-height: 30rem;
+  }
 `;
 
 export { GridSection };
