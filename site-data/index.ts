@@ -1,32 +1,33 @@
 const slides: Image[] = [
   {
-    nextGen: "/assets/img/bg-boutique-87.avif",
-    fallback: "/assets/img/bg-boutique-87.jpg",
+    blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+    src: "/assets/img/bg-boutique-87.jpg",
   },
   {
-    nextGen: "/assets/img/singhagiri-fireplace.avif",
-    fallback: "/assets/img/singhagiri-fireplace.jpg",
+    blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+    src: "/assets/img/singhagiri-fireplace.jpg",
+    alt: "Fireplace of Singhagri",
   },
   {
-    nextGen: "/assets/img/singhagiri-brunch.avif",
-    fallback: "/assets/img/singhagiri-brunch.jpg",
+    blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+    src: "/assets/img/singhagiri-brunch.jpg",
   },
   {
-    nextGen: "/assets/img/singhagiri-room.avif",
-    fallback: "/assets/img/singhagiri-room.jpg",
+    blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+    src: "/assets/img/singhagiri-room.jpg",
   },
 ];
 
 const hotelsSlider: SliderContent[] = [
   {
     primaryImage: {
-      nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.jpg",
+      blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+      src: "/assets/img/bg-boutique-87.jpg",
       alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
     },
     secondaryImage: {
-      nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.jpg",
+      blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+      src: "/assets/img/singhagiri-brunch.jpg",
       alt: "Casa Heliconia Dining - Sri Lankan Luxury Boutique Hotel",
     },
     content: {
@@ -41,13 +42,13 @@ const hotelsSlider: SliderContent[] = [
   },
   {
     primaryImage: {
-      nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.jpg",
+      blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+      src: "/assets/img/bg-boutique-87.jpg",
       alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
     },
     secondaryImage: {
-      nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.jpg",
+      blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+      src: "/assets/img/singhagiri-brunch.jpg",
       alt: "Casa Heliconia Dining - Sri Lankan Luxury Boutique Hotel",
     },
     content: {
@@ -62,13 +63,13 @@ const hotelsSlider: SliderContent[] = [
   },
   {
     primaryImage: {
-      nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.jpg",
+      blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+      src: "/assets/img/bg-boutique-87.jpg",
       alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
     },
     secondaryImage: {
-      nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.jpg",
+      blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+      src: "/assets/img/singhagiri-brunch.jpg",
       alt: "Casa Heliconia Dining - Sri Lankan Luxury Boutique Hotel",
     },
     content: {
@@ -104,21 +105,22 @@ const hotels: Hotel[] = [
         id: "temple-angkor",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
           },
           {
-            nextGen: "/assets/img/singhagiri-brunch.avif",
-            fallback: "/assets/img/singhagiri-brunch.jpg",
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
           },
           {
-            nextGen: "/assets/img/singhagiri-room.avif",
-            fallback: "/assets/img/singhagiri-room.jpg",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Temple Angkor",
@@ -140,21 +142,22 @@ const hotels: Hotel[] = [
         id: "pagoda-gold",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
           },
           {
-            nextGen: "/assets/img/singhagiri-brunch.avif",
-            fallback: "/assets/img/singhagiri-brunch.jpg",
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
           },
           {
-            nextGen: "/assets/img/singhagiri-room.avif",
-            fallback: "/assets/img/singhagiri-room.jpg",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Pagoda Gold",
@@ -165,8 +168,8 @@ const hotels: Hotel[] = [
     description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
-        nextGen: "/assets/img/bg-boutique-87.avif",
-        fallback: "/assets/img/bg-boutique-87.jpg",
+        blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+        src: "/assets/img/bg-boutique-87.jpg",
         alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
       },
     ],
@@ -200,13 +203,22 @@ const hotels: Hotel[] = [
         id: "temple-angkor",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
+          },
+          {
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
+          },
+          {
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Temple Angkor",
@@ -228,21 +240,22 @@ const hotels: Hotel[] = [
         id: "pagoda-gold",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
           },
           {
-            nextGen: "/assets/img/singhagiri-brunch.avif",
-            fallback: "/assets/img/singhagiri-brunch.jpg",
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
           },
           {
-            nextGen: "/assets/img/singhagiri-room.avif",
-            fallback: "/assets/img/singhagiri-room.jpg",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Pagoda Gold",
@@ -253,8 +266,8 @@ const hotels: Hotel[] = [
     description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
-        nextGen: "/assets/img/bg-boutique-87.avif",
-        fallback: "/assets/img/bg-boutique-87.jpg",
+        blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+        src: "/assets/img/bg-boutique-87.jpg",
         alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
       },
     ],
@@ -288,21 +301,22 @@ const hotels: Hotel[] = [
         id: "temple-angkor",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
           },
           {
-            nextGen: "/assets/img/singhagiri-brunch.avif",
-            fallback: "/assets/img/singhagiri-brunch.jpg",
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
           },
           {
-            nextGen: "/assets/img/singhagiri-room.avif",
-            fallback: "/assets/img/singhagiri-room.jpg",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Temple Angkor",
@@ -324,21 +338,22 @@ const hotels: Hotel[] = [
         id: "pagoda-gold",
         images: [
           {
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
+            blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+            src: "/assets/img/bg-boutique-87.jpg",
             alt: "Casa Heliconia Front - Sri Lankan Luxury Boutique Hotel",
           },
           {
-            nextGen: "/assets/img/singhagiri-fireplace.avif",
-            fallback: "/assets/img/singhagiri-fireplace.jpg",
+            blurUrl: "L59?I40f15SKcEi{rqoz03=x}SxG",
+            src: "/assets/img/singhagiri-fireplace.jpg",
+            alt: "Fireplace of Singhagri",
           },
           {
-            nextGen: "/assets/img/singhagiri-brunch.avif",
-            fallback: "/assets/img/singhagiri-brunch.jpg",
+            blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+            src: "/assets/img/singhagiri-brunch.jpg",
           },
           {
-            nextGen: "/assets/img/singhagiri-room.avif",
-            fallback: "/assets/img/singhagiri-room.jpg",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
           },
         ],
         name: "Pagoda Gold",
@@ -349,8 +364,8 @@ const hotels: Hotel[] = [
     description: `Casa Heliconia comprises four beautiful and eclectic pavilions set in manicured jungle within easy reach of Bandaranaike Airport. An ideal retreat for anyone seeking peace, tranquillity, and some idiosyncratic features in very private surroundings.`,
     images: [
       {
-        nextGen: "/assets/img/singhagiri-brunch.avif",
-        fallback: "/assets/img/singhagiri-brunch.jpg",
+        blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+        src: "/assets/img/singhagiri-brunch.jpg",
         alt: "Casa Heliconia Dining - Sri Lankan Luxury Boutique Hotel",
       },
     ],
@@ -371,8 +386,8 @@ const offers: Offer[] = [
     description: "Stay 3 Nights for a price of 2 Nights",
     id: "3-for-2",
     image: {
-      nextGen: "/assets/img/bg-boutique-87.avif",
-      fallback: "/assets/img/bg-boutique-87.jpg",
+      blurUrl: "LOEWK*_Mx^xbyVxu%3t8-;ozoNs;",
+      src: "/assets/img/bg-boutique-87.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [
@@ -401,8 +416,8 @@ const offers: Offer[] = [
     description: "Book you honeymoon escape with our special honeymoon package",
     id: "honeymoon-offer",
     image: {
-      nextGen: "/assets/img/singhagiri-brunch.avif",
-      fallback: "/assets/img/singhagiri-brunch.jpg",
+      blurUrl: "LFLqLc9ZyDSdLLtRi^-:_NxaW?%g",
+      src: "/assets/img/singhagiri-brunch.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [
@@ -430,8 +445,8 @@ const offers: Offer[] = [
       "Book before 31st of August to enjoy 20% off in All Properties",
     id: "early-bird",
     image: {
-      nextGen: "/assets/img/singhagiri-room.avif",
-      fallback: "/assets/img/singhagiri-room.jpg",
+      blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+      src: "/assets/img/singhagiri-room.jpg",
       alt: "Stay 3 Nights for price of 2 Nights offer cover image",
     },
     includes: [
