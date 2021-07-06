@@ -24,6 +24,8 @@ const ImageComponent: React.FC<Props> = ({
         layout="fill"
         objectFit="cover"
         objectPosition={`${x} ${y}`}
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${image.blurUrl}`}
       />
     </ImgBox>
   );
