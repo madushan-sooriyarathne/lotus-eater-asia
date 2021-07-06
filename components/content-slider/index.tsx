@@ -18,6 +18,7 @@ import {
   SliderContentVariants,
 } from "./styles";
 import { clamp } from "@utils";
+import ImageComponent from "@components/image";
 
 interface Props {
   items: SliderContent[];
@@ -46,42 +47,30 @@ const ContentSlider: React.FC<Props> = ({ items }: Props): JSX.Element => {
       </SliderControls>
       <AnimatePresence initial={true}>
         <PrimaryImage>
-          <picture>
-            <source
-              type="image/avif"
-              srcSet={items[page].primaryImage.nextGen}
-            />
-            <AnimatedPicture
-              variants={sliderVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              key={page}
-              transition={{ duration: 0.5 }}
-              src={items[page].primaryImage.fallback}
-              alt={items[page].primaryImage.alt}
-            />
-          </picture>
+          <AnimatedPicture
+            variants={sliderVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            key={page}
+            transition={{ duration: 0.5 }}
+          >
+            <ImageComponent image={items[page].primaryImage} />
+          </AnimatedPicture>
         </PrimaryImage>
       </AnimatePresence>
       <AnimatePresence initial={true}>
         <SecondaryImage>
-          <picture>
-            <source
-              type="image/avif"
-              srcSet={items[page].secondaryImage.nextGen}
-            />
-            <AnimatedPicture
-              variants={sliderVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              key={page}
-              transition={{ duration: 0.5 }}
-              src={items[page].secondaryImage.fallback}
-              alt={items[page].secondaryImage.alt}
-            />
-          </picture>
+          <AnimatedPicture
+            variants={sliderVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            key={page}
+            transition={{ duration: 0.5 }}
+          >
+            <ImageComponent image={items[page].secondaryImage} />
+          </AnimatedPicture>
         </SecondaryImage>
 
         <ContentWrapper

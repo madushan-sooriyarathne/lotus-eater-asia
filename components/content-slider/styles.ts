@@ -64,7 +64,7 @@ const SecondaryImage = styled(PictureContainer)`
   grid-area: im2;
 `;
 
-const AnimatedPicture = styled(motion.img)`
+const AnimatedPicture = styled(motion.div)`
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -72,7 +72,6 @@ const AnimatedPicture = styled(motion.img)`
 
   min-width: 100%;
   height: 100%;
-  object-fit: cover;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
