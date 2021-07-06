@@ -70,9 +70,9 @@ const NewsletterSection: React.FC = (): JSX.Element => {
       </ContentGroup>
       <ImageComponent
         image={{
-          nextGen: "/assets/img/singhagiri-fireplace.avif",
-          fallback: "/assets/img/singhagiri-fireplace.jpg",
-          alt: "Singhagiri Boutiuque Hotel Nuwara Eliya",
+          blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+          src: "/assets/img/singhagiri-room.jpg",
+          alt: "Stay 3 Nights for price of 2 Nights offer cover image",
         }}
       />
     </Section>

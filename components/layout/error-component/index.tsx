@@ -31,8 +31,8 @@ const ErrorComponent: React.FC<Props> = ({ errorCode }: Props): JSX.Element => {
       <ImageBg>
         <ImageComponent
           image={{
-            fallback: "/assets/img/error-bg.jpg",
-            nextGen: "/assets/img/error-bg.avif",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
             alt: `${errorCode} page - Background Image | Lotus Eater Asia Hotels`,
           }}
         />

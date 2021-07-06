@@ -32,9 +32,9 @@ const AboutSection: React.FC = (): JSX.Element => {
       <ImageWrapper>
         <ImageComponent
           image={{
-            nextGen: "/assets/img/bg-boutique-87.avif",
-            fallback: "/assets/img/bg-boutique-87.jpg",
-            alt: "About us section Image",
+            blurUrl: "LGEKV|}=v$:+xaNdE3MzIp$jOX5m",
+            src: "/assets/img/singhagiri-room.jpg",
+            alt: "Stay 3 Nights for price of 2 Nights offer cover image",
           }}
         />
       </ImageWrapper>
