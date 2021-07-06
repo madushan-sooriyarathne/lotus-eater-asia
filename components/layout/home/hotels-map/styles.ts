@@ -115,10 +115,9 @@ const CloseButton = styled.svg`
   }
 `;
 
-const Image = styled.img`
+const ImageBox = styled.div`
   width: 100%;
   height: 20rem;
-  object-fit: cover;
 `;
 
 const CardContent = styled.div`
@@ -161,7 +160,7 @@ export {
   Map,
   MapCard,
   CloseButton,
-  Image,
+  ImageBox,
   CardContent,
   HeadingGroup,
   cardVariants,

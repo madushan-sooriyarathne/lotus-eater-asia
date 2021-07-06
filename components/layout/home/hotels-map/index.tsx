@@ -12,12 +12,13 @@ import {
   MapWrapper,
   Marker,
   MapCard,
-  Image,
+  ImageBox,
   CardContent,
   HeadingGroup,
   cardVariants,
   CloseButton,
 } from "./styles";
+import ImageComponent from "@components/image";
 
 interface Props {
   hotels: Hotel[];
@@ -82,13 +83,9 @@ const HotelsMap: React.FC<Props> = ({ hotels }: Props): JSX.Element => {
               <CloseButton onClick={closeMenuCard}>
                 <use xlinkHref="/assets/svg/sprites.svg#icon-close" />
               </CloseButton>
-              <picture>
-                <source type="image/avif" srcSet={selected.images[0].nextGen} />
-                <Image
-                  src={selected.images[0].fallback}
-                  alt={selected.images[0].alt}
-                />
-              </picture>
+              <ImageBox>
+                <ImageComponent image={selected.images[0]} />
+              </ImageBox>
               <CardContent>
                 <HeadingGroup>
                   <HeadingTertiary>{selected.name}</HeadingTertiary>
