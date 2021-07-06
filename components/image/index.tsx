@@ -19,7 +19,7 @@ const ImageComponent: React.FC<Props> = ({
   return (
     <ImgBox width={width} height={height}>
       <Image
-        src={image.fallback}
+        src={image.src}
         alt={image.alt}
         layout="fill"
         objectFit="cover"
