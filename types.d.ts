@@ -6,7 +6,7 @@ declare global {
 
   interface Image {
     src: string;
-    blurUrl?: string;
+    blurUrl: string;
     alt?: string;
   }
 
